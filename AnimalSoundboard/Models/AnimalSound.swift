@@ -21,7 +21,6 @@ class AnimalSound{
     init(url: URL){
         self.url = url
         
-        self.name = url.lastPathComponent
     }
     
     

@@ -31,6 +31,11 @@ class ViewController: UIViewController {
         
         label.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         label.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        
+        
+        FilesFetcher.fetchFiles { files in
+            print(files)
+        }
     }
 
 

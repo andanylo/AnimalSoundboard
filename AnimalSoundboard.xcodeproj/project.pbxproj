@@ -10,6 +10,8 @@
 		1DE162932A475FEA00AE4CCD /* AnimalSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE162922A475FEA00AE4CCD /* AnimalSound.swift */; };
 		1DE162952A47602400AE4CCD /* AnimalCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE162942A47602400AE4CCD /* AnimalCellModel.swift */; };
 		1DE162972A4760B100AE4CCD /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE162962A4760B100AE4CCD /* SoundManager.swift */; };
+		1DE162992A477BCC00AE4CCD /* FilesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE162982A477BCC00AE4CCD /* FilesFetcher.swift */; };
+		1DE1629D2A477F7F00AE4CCD /* Files in Resources */ = {isa = PBXBuildFile; fileRef = 1DE1629C2A477F7F00AE4CCD /* Files */; };
 		1DFA3F632A39D886000661AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFA3F622A39D886000661AF /* AppDelegate.swift */; };
 		1DFA3F652A39D886000661AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFA3F642A39D886000661AF /* SceneDelegate.swift */; };
 		1DFA3F672A39D886000661AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFA3F662A39D886000661AF /* ViewController.swift */; };
@@ -41,6 +43,8 @@
 		1DE162922A475FEA00AE4CCD /* AnimalSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSound.swift; sourceTree = "<group>"; };
 		1DE162942A47602400AE4CCD /* AnimalCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCellModel.swift; sourceTree = "<group>"; };
 		1DE162962A4760B100AE4CCD /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		1DE162982A477BCC00AE4CCD /* FilesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesFetcher.swift; sourceTree = "<group>"; };
+		1DE1629C2A477F7F00AE4CCD /* Files */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Files; sourceTree = "<group>"; };
 		1DFA3F5F2A39D886000661AF /* AnimalSoundboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalSoundboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DFA3F622A39D886000661AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DFA3F642A39D886000661AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +90,7 @@
 				1DE162922A475FEA00AE4CCD /* AnimalSound.swift */,
 				1DE162942A47602400AE4CCD /* AnimalCellModel.swift */,
 				1DE162962A4760B100AE4CCD /* SoundManager.swift */,
+				1DE162982A477BCC00AE4CCD /* FilesFetcher.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -108,6 +113,7 @@
 		1DFA3F562A39D886000661AF = {
 			isa = PBXGroup;
 			children = (
+				1DE1629C2A477F7F00AE4CCD /* Files */,
 				1DFA3F612A39D886000661AF /* AnimalSoundboard */,
 				1DFA3F782A39D888000661AF /* AnimalSoundboardTests */,
 				1DFA3F822A39D888000661AF /* AnimalSoundboardUITests */,
@@ -261,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DE1629D2A477F7F00AE4CCD /* Files in Resources */,
 				1DFA3F6F2A39D887000661AF /* LaunchScreen.storyboard in Resources */,
 				1DFA3F6C2A39D887000661AF /* Assets.xcassets in Resources */,
 			);
@@ -292,6 +299,7 @@
 				1DFA3F632A39D886000661AF /* AppDelegate.swift in Sources */,
 				1DFA3F652A39D886000661AF /* SceneDelegate.swift in Sources */,
 				1DE162972A4760B100AE4CCD /* SoundManager.swift in Sources */,
+				1DE162992A477BCC00AE4CCD /* FilesFetcher.swift in Sources */,
 				1DE162932A475FEA00AE4CCD /* AnimalSound.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
