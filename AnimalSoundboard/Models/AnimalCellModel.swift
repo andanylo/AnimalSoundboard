@@ -13,15 +13,17 @@ class AnimalCellModel{
     ///Identifier that have a unique name in order to identify a model
     var identifier: String = ""
     
-    ///Animal sound object that has an url and sound manager to play a sound
-    var animalSound: AnimalSound?
+    ///Animal info object that has an url and sound manager to play a sound
+    var animalInfo: AnimalInfo?
     
-    ///Displayed name on a cell
-    lazy var displayedName: String = {
-        return animalSound?.url.lastPathComponent ?? ""
-    }()
+    
     
     init(identifier: String){
         self.identifier = identifier
+    }
+    
+    init(animalInfo: AnimalInfo){
+        self.identifier = animalInfo.url.path
+        self.animalInfo = animalInfo
     }
 }

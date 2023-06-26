@@ -186,6 +186,51 @@
 			<key>uniqueIdentifier</key>
 			<string>37F74E53-F313-46C3-B716-CEABBC571AA6</string>
 		</dict>
+		<key>4CC970C7-BE36-41FA-849B-227D619BEF86</key>
+		<dict>
+			<key>auxiliaryLogUniqueIdentifier</key>
+			<string>12063862-F140-467E-AAE6-2A4A34967B81</string>
+			<key>auxiliaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>className</key>
+			<string>IDESchemeActionsInvocationRecord</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
+			<key>fileName</key>
+			<string>Run-AnimalSoundboard-2023.06.24_16-06-15--0400.xcresult</string>
+			<key>hasAuxiliaryLog</key>
+			<true/>
+			<key>hasConsoleLog</key>
+			<true/>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AnimalSoundboard project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AnimalSoundboard</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AnimalSoundboard</string>
+			<key>timeStartedRecording</key>
+			<real>709329975.31789398</real>
+			<key>timeStoppedRecording</key>
+			<real>0.0</real>
+			<key>title</key>
+			<string>Run AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>4CC970C7-BE36-41FA-849B-227D619BEF86</string>
+		</dict>
 		<key>4D333ECA-463E-451D-9A34-D080A1565218</key>
 		<dict>
 			<key>auxiliaryLogUniqueIdentifier</key>

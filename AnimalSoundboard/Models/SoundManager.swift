@@ -10,9 +10,9 @@ import Foundation
 ///Sound manager class that manages the sound playback
 class SoundManager{
     
-    weak var animalSound: AnimalSound?
+    weak var animalInfo: AnimalInfo?
     
-    init(animalSound: AnimalSound? = nil) {
-        self.animalSound = animalSound
+    init(animalInfo: AnimalInfo? = nil) {
+        self.animalInfo = animalInfo
     }
 }
