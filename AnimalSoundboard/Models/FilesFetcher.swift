@@ -21,12 +21,14 @@ class FilesFetcher{
     ///Returns the file fetch objects from a 'Files' folder
     static func fetchFiles(completion: @escaping([FileFetch]) -> Void){
         Task(priority: .medium) {
-            guard let files = Bundle.main.path(forResource: "Files", ofType: nil), let folders = try? FileManager.default.contentsOfDirectory(atPath: files) else{
+            guard let files = Bundle.main.path(forResource: "Files", ofType: nil), var folders = try? FileManager.default.contentsOfDirectory(atPath: files) else{
                 completion([])
                 return
             }
             
             var result: [FileFetch] = []
+            //Sort folders by name
+            folders = folders.sorted(by: {$1 > $0})
             for folder in folders{
                 let folderPath = files + "/" + folder
                 
