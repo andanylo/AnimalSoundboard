@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 ///Cell model for a reusable cell
 class AnimalCellModel: Hashable{
@@ -29,6 +30,9 @@ class AnimalCellModel: Hashable{
         }
     }
     
+    
+    var previewImage: UIImage?
+    
     init(identifier: String){
         self.identifier = identifier
     }
@@ -36,5 +40,21 @@ class AnimalCellModel: Hashable{
     init(animalInfo: AnimalInfo){
         self.identifier = animalInfo.url.path
         self.animalInfo = animalInfo
+       
+    }
+    
+    ///Loads and draws an image asynchronically
+    func loadImageAsynchronically(completion: @escaping(UIImage?) -> Void){
+        DispatchQueue.global(qos: .userInitiated).async {
+            guard let imageURL = self.animalInfo?.image, let data = try? Data(contentsOf: imageURL) else{
+                completion(nil)
+                return
+            }
+            let image = UIImage(data: data)
+            
+            self.previewImage = image
+            
+            completion(self.previewImage)
+        }
     }
 }
