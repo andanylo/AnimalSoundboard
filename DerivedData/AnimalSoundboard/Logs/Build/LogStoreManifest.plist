@@ -380,6 +380,40 @@
 			<key>uniqueIdentifier</key>
 			<string>DB434828-E48F-4274-A61F-13B9A5DBACA2</string>
 		</dict>
+		<key>FAF736F2-6130-4060-8ABD-ACC2F2E062C3</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FAF736F2-6130-4060-8ABD-ACC2F2E062C3.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AnimalSoundboard project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AnimalSoundboard</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build AnimalSoundboard</string>
+			<key>timeStartedRecording</key>
+			<real>709921492.79644299</real>
+			<key>timeStoppedRecording</key>
+			<real>709921494.05463696</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>FAF736F2-6130-4060-8ABD-ACC2F2E062C3</string>
+		</dict>
 	</dict>
 </dict>
 </plist>

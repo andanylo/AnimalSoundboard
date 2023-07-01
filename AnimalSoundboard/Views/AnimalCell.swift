@@ -14,7 +14,7 @@ class AnimalCell: UICollectionViewCell{
         self.animalCellModel = nil
         self.nameLabel.removeFromSuperview()
         
-        self.imageView.removeFromSuperview()
+        self.previewImageView.removeFromSuperview()
     }
     var animalCellModel: AnimalCellModel?
     
@@ -30,8 +30,8 @@ class AnimalCell: UICollectionViewCell{
         return label
     }()
     
-    
-    lazy var imageView: UIImageView = {
+    //
+    lazy var previewImageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect.zero)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
@@ -47,18 +47,18 @@ class AnimalCell: UICollectionViewCell{
         self.contentView.layer.borderColor = UIColor.black.cgColor
         self.contentView.clipsToBounds = true
         
-        if imageView.superview == nil{
-            self.contentView.addSubview(imageView)
+        if previewImageView.superview == nil{
+            self.contentView.addSubview(previewImageView)
             
-            imageView.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
-            imageView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor).isActive = true
-            imageView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor).isActive = true
-            imageView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor).isActive = true
+            previewImageView.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
+            previewImageView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor).isActive = true
+            previewImageView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor).isActive = true
+            previewImageView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor).isActive = true
         }
         if animalCellModel?.previewImage == nil{
             animalCellModel?.loadImageAsynchronically(completion: { image in
                 DispatchQueue.main.async {
-                    self.imageView.image = image
+                    self.previewImageView.image = image
                 }
             })
         }
@@ -79,6 +79,8 @@ class AnimalCell: UICollectionViewCell{
         nameLabel.sizeToFit()
         
         
+        let tapGestureRecognizer = 
+        self.contentView.addGestureRecognizer(<#T##gestureRecognizer: UIGestureRecognizer##UIGestureRecognizer#>)
         
         
     }

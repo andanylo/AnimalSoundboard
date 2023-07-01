@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D0B91392A508BC2000F3CB8 /* SoundHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B91382A508BC2000F3CB8 /* SoundHandler.swift */; };
+		1D0B913B2A508F7D000F3CB8 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B913A2A508F7D000F3CB8 /* PlayerManager.swift */; };
+		1D0B913D2A5092B8000F3CB8 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B913C2A5092B8000F3CB8 /* Sound.swift */; };
 		1DE162932A475FEA00AE4CCD /* AnimalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE162922A475FEA00AE4CCD /* AnimalInfo.swift */; };
 		1DE162952A47602400AE4CCD /* AnimalCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE162942A47602400AE4CCD /* AnimalCellModel.swift */; };
 		1DE162972A4760B100AE4CCD /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE162962A4760B100AE4CCD /* SoundManager.swift */; };
@@ -43,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D0B91382A508BC2000F3CB8 /* SoundHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundHandler.swift; sourceTree = "<group>"; };
+		1D0B913A2A508F7D000F3CB8 /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
+		1D0B913C2A5092B8000F3CB8 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		1DE162922A475FEA00AE4CCD /* AnimalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalInfo.swift; sourceTree = "<group>"; };
 		1DE162942A47602400AE4CCD /* AnimalCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCellModel.swift; sourceTree = "<group>"; };
 		1DE162962A4760B100AE4CCD /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
@@ -95,10 +101,13 @@
 			children = (
 				1DE162922A475FEA00AE4CCD /* AnimalInfo.swift */,
 				1DE162942A47602400AE4CCD /* AnimalCellModel.swift */,
-				1DE162962A4760B100AE4CCD /* SoundManager.swift */,
 				1DE162982A477BCC00AE4CCD /* FilesFetcher.swift */,
 				1DE1629E2A49DEAE00AE4CCD /* AnimalInfoCreator.swift */,
 				1DE162A02A49FD4A00AE4CCD /* CollectionViewModel.swift */,
+				1DE162962A4760B100AE4CCD /* SoundManager.swift */,
+				1D0B91382A508BC2000F3CB8 /* SoundHandler.swift */,
+				1D0B913A2A508F7D000F3CB8 /* PlayerManager.swift */,
+				1D0B913C2A5092B8000F3CB8 /* Sound.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -303,9 +312,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D0B913D2A5092B8000F3CB8 /* Sound.swift in Sources */,
 				1DE1629F2A49DEAE00AE4CCD /* AnimalInfoCreator.swift in Sources */,
 				1DE162952A47602400AE4CCD /* AnimalCellModel.swift in Sources */,
+				1D0B913B2A508F7D000F3CB8 /* PlayerManager.swift in Sources */,
 				1DFA3F672A39D886000661AF /* ViewController.swift in Sources */,
+				1D0B91392A508BC2000F3CB8 /* SoundHandler.swift in Sources */,
 				1DFA3F632A39D886000661AF /* AppDelegate.swift in Sources */,
 				1DFA3F652A39D886000661AF /* SceneDelegate.swift in Sources */,
 				1DE162972A4760B100AE4CCD /* SoundManager.swift in Sources */,
