@@ -6,17 +6,18 @@
 //
 
 import Foundation
-class SoundHandler: SoundDelegate{
-    func didStopPlaying(soundManager: SoundManager, forced: Bool) {
-        <#code#>
+import AVFoundation
+class SoundHandler: NSObject, SoundDelegate{
+    func didStopPlaying(soundManager: SoundManager?, forced: Bool) {
+        
     }
     
-    func willPlaySound(soundManager: SoundManager) {
-        <#code#>
+    func willPlaySound(soundManager: SoundManager?) {
+        
     }
     
-    func didStartPlaying(soundManager: SoundManager) {
-        <#code#>
+    func didStartPlaying(soundManager: SoundManager?) {
+        
     }
     
     static let shared = SoundHandler()
@@ -25,8 +26,16 @@ class SoundHandler: SoundDelegate{
 }
 
 
+
+extension SoundHandler: AVAudioPlayerDelegate{
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        
+    }
+}
+
+
 protocol SoundDelegate: AnyObject {
-    func didStopPlaying(soundManager: SoundManager, forced: Bool)
-    func willPlaySound(soundManager: SoundManager)
-    func didStartPlaying(soundManager: SoundManager)
+    func didStopPlaying(soundManager: SoundManager?, forced: Bool)
+    func willPlaySound(soundManager: SoundManager?)
+    func didStartPlaying(soundManager: SoundManager?)
 }

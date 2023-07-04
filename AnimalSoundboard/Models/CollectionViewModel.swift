@@ -40,7 +40,6 @@ class CollectionViewModel{
     ///Fetches files from main bundle and creates cell models from that
     func fetchAndCreateAnimalCellModels(completion: @escaping([AnimalCellModel]) -> Void){
         FilesFetcher.fetchFiles { [weak self] files in
-            print(files.map({$0.name}))
             let animalInfos = AnimalInfoCreator.createAnimalInfos(filesFetch: files)
             var animalCellModels: [AnimalCellModel] = []
             for animalInfo in animalInfos{
