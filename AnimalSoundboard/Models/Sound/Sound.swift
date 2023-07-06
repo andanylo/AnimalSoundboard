@@ -9,7 +9,13 @@ import Foundation
 import AVFoundation
 class Sound{
     var player: AVAudioPlayer = AVAudioPlayer()
-    weak var soundManager: SoundManager?
+    weak var soundManager: SoundManager?{
+        didSet{
+            if let oldSoundManager = oldValue, !(oldSoundManager === soundManager){
+                oldSoundManager.clearRemovedSound(sound: self, forced: false)
+            }
+        }
+    }
     
     var isForceStopped = false
     var isPlaying: Bool {
@@ -63,9 +69,26 @@ class Sound{
         guard self.soundManager?.animalInfo?.url == player.url else{
             return
         }
+        do{
+            try setAudioSetting()
+            player.prepareToPlay()
+            player.play()
+            
+            
+            print(PlayerManager.shared.players.map({$0.isPlaying}))
+        }
+        catch{
+            
+        }
         
-        player.prepareToPlay()
-        player.play()
+        
+        
     }
     
+    
+    func setAudioSetting() throws{
+        
+        try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.mixWithOthers])
+        try AVAudioSession.sharedInstance().setActive(true)
+    }
 }

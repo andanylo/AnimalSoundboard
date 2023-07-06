@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>238428EC-8FE5-41C7-933C-8AE1C10D8DC9</key>
+		<key>0C299A77-33DE-4E89-9DEB-31845EE099D8</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -15,7 +15,35 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>238428EC-8FE5-41C7-933C-8AE1C10D8DC9.xcactivitylog</string>
+			<string>0C299A77-33DE-4E89-9DEB-31845EE099D8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfcHJvdmlkZXJGaWxlUGF0aFN0cmluZyI6IlwvVXNlcnNcL2RhbmlsYW5kcml1c2NoZW5rb1wvUHJvamVjdHNcL0FuaW1hbFNvdW5kYm9hcmRcL0FuaW1hbFNvdW5kYm9hcmQueGNvZGVwcm9qIiwiYmx1ZXByaW50X2JsdWVwcmludElkZW50aWZpZXIiOiIxREZBM0Y1RTJBMzlEODg2MDAwNjYxQUYifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>710368037.40507901</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>0C299A77-33DE-4E89-9DEB-31845EE099D8</string>
+		</dict>
+		<key>1FCB4E44-7C9B-4745-9CDF-0841CCEE534E</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>1FCB4E44-7C9B-4745-9CDF-0841CCEE534E.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -24,7 +52,7 @@
 				<string>S</string>
 			</dict>
 			<key>signature</key>
-			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfcHJvdmlkZXJGaWxlUGF0aFN0cmluZyI6IlwvVXNlcnNcL2RhbmlsYW5kcml1c2NoZW5rb1wvUHJvamVjdHNcL0FuaW1hbFNvdW5kYm9hcmRcL0FuaW1hbFNvdW5kYm9hcmQueGNvZGVwcm9qIiwiYmx1ZXByaW50X2JsdWVwcmludElkZW50aWZpZXIiOiIxREZBM0Y1RTJBMzlEODg2MDAwNjYxQUYifQ==</string>
 			<key>timeStartedRecording</key>
 			<real>709921492.79644299</real>
 			<key>timeStoppedRecording</key>
@@ -32,7 +60,91 @@
 			<key>title</key>
 			<string>Build AnimalSoundboard</string>
 			<key>uniqueIdentifier</key>
-			<string>238428EC-8FE5-41C7-933C-8AE1C10D8DC9</string>
+			<string>1FCB4E44-7C9B-4745-9CDF-0841CCEE534E</string>
+		</dict>
+		<key>2018F5B5-9370-4DED-91A0-DBDF1588BAF5</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>2018F5B5-9370-4DED-91A0-DBDF1588BAF5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfcHJvdmlkZXJGaWxlUGF0aFN0cmluZyI6IlwvVXNlcnNcL2RhbmlsYW5kcml1c2NoZW5rb1wvUHJvamVjdHNcL0FuaW1hbFNvdW5kYm9hcmRcL0FuaW1hbFNvdW5kYm9hcmQueGNvZGVwcm9qIiwiYmx1ZXByaW50X2JsdWVwcmludElkZW50aWZpZXIiOiIxREZBM0Y1RTJBMzlEODg2MDAwNjYxQUYifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>710370675.52187395</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>2018F5B5-9370-4DED-91A0-DBDF1588BAF5</string>
+		</dict>
+		<key>22297CAF-32CF-46E0-9472-DFCECC7A5DB8</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>22297CAF-32CF-46E0-9472-DFCECC7A5DB8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9kYW5pbGFuZHJpdXNjaGVua29cL1Byb2plY3RzXC9BbmltYWxTb3VuZGJvYXJkXC9BbmltYWxTb3VuZGJvYXJkLnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>710369783.14172196</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>22297CAF-32CF-46E0-9472-DFCECC7A5DB8</string>
+		</dict>
+		<key>2ECF398F-352F-44B0-B5D4-3AC1C7BB342F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>2ECF398F-352F-44B0-B5D4-3AC1C7BB342F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9kYW5pbGFuZHJpdXNjaGVua29cL1Byb2plY3RzXC9BbmltYWxTb3VuZGJvYXJkXC9BbmltYWxTb3VuZGJvYXJkLnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>710368076.16335106</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>2ECF398F-352F-44B0-B5D4-3AC1C7BB342F</string>
 		</dict>
 		<key>312DDE6E-5279-4B04-8F3E-EA96B48C99E6</key>
 		<dict>
@@ -62,7 +174,7 @@
 			<key>uniqueIdentifier</key>
 			<string>312DDE6E-5279-4B04-8F3E-EA96B48C99E6</string>
 		</dict>
-		<key>D5A93F6C-9F37-489B-9831-48A86F475028</key>
+		<key>48603E73-39C4-4579-B5D3-7E777E077E2F</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -71,7 +183,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>D5A93F6C-9F37-489B-9831-48A86F475028.xcactivitylog</string>
+			<string>48603E73-39C4-4579-B5D3-7E777E077E2F.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -80,17 +192,17 @@
 				<string>S</string>
 			</dict>
 			<key>signature</key>
-			<string>eyJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfcHJvdmlkZXJGaWxlUGF0aFN0cmluZyI6IlwvVXNlcnNcL2RhbmlsYW5kcml1c2NoZW5rb1wvUHJvamVjdHNcL0FuaW1hbFNvdW5kYm9hcmRcL0FuaW1hbFNvdW5kYm9hcmQueGNvZGVwcm9qIiwiYmx1ZXByaW50X2JsdWVwcmludElkZW50aWZpZXIiOiIxREZBM0Y1RTJBMzlEODg2MDAwNjYxQUYifQ==</string>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9kYW5pbGFuZHJpdXNjaGVua29cL1Byb2plY3RzXC9BbmltYWxTb3VuZGJvYXJkXC9BbmltYWxTb3VuZGJvYXJkLnhjb2RlcHJvaiJ9</string>
 			<key>timeStartedRecording</key>
-			<real>709921492.79644299</real>
+			<real>710369772.013304</real>
 			<key>timeStoppedRecording</key>
-			<real>709921494.05463696</real>
+			<real>63113904000</real>
 			<key>title</key>
 			<string>Build AnimalSoundboard</string>
 			<key>uniqueIdentifier</key>
-			<string>D5A93F6C-9F37-489B-9831-48A86F475028</string>
+			<string>48603E73-39C4-4579-B5D3-7E777E077E2F</string>
 		</dict>
-		<key>E1CB483A-0E78-4051-943F-8343B3CBE9B0</key>
+		<key>4CCE9FF3-C680-48AC-8980-0BB6F0DAD491</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -99,7 +211,399 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>E1CB483A-0E78-4051-943F-8343B3CBE9B0.xcactivitylog</string>
+			<string>4CCE9FF3-C680-48AC-8980-0BB6F0DAD491.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9kYW5pbGFuZHJpdXNjaGVua29cL1Byb2plY3RzXC9BbmltYWxTb3VuZGJvYXJkXC9BbmltYWxTb3VuZGJvYXJkLnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>710369578.46896696</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>4CCE9FF3-C680-48AC-8980-0BB6F0DAD491</string>
+		</dict>
+		<key>6128F1FF-FB91-4DCE-9DC5-89A95135997E</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>6128F1FF-FB91-4DCE-9DC5-89A95135997E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>710369772.013304</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>6128F1FF-FB91-4DCE-9DC5-89A95135997E</string>
+		</dict>
+		<key>68E2DB80-08A6-4C9F-8247-1D2905428274</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>68E2DB80-08A6-4C9F-8247-1D2905428274.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfcHJvdmlkZXJGaWxlUGF0aFN0cmluZyI6IlwvVXNlcnNcL2RhbmlsYW5kcml1c2NoZW5rb1wvUHJvamVjdHNcL0FuaW1hbFNvdW5kYm9hcmRcL0FuaW1hbFNvdW5kYm9hcmQueGNvZGVwcm9qIiwiYmx1ZXByaW50X2JsdWVwcmludElkZW50aWZpZXIiOiIxREZBM0Y1RTJBMzlEODg2MDAwNjYxQUYifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>710369846.08638</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>68E2DB80-08A6-4C9F-8247-1D2905428274</string>
+		</dict>
+		<key>6AEF5409-3A6E-4115-BE86-403EF5C3F706</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>6AEF5409-3A6E-4115-BE86-403EF5C3F706.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>710369783.14172196</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>6AEF5409-3A6E-4115-BE86-403EF5C3F706</string>
+		</dict>
+		<key>7E386316-9B35-4478-97E1-F3C84E01C35F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7E386316-9B35-4478-97E1-F3C84E01C35F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9kYW5pbGFuZHJpdXNjaGVua29cL1Byb2plY3RzXC9BbmltYWxTb3VuZGJvYXJkXC9BbmltYWxTb3VuZGJvYXJkLnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>710370675.52187395</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>7E386316-9B35-4478-97E1-F3C84E01C35F</string>
+		</dict>
+		<key>7F11AF08-0167-4F8C-BD97-05ED8C90DEE5</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7F11AF08-0167-4F8C-BD97-05ED8C90DEE5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>710369846.08638</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>7F11AF08-0167-4F8C-BD97-05ED8C90DEE5</string>
+		</dict>
+		<key>83A28F63-8A99-4F49-A9E9-C639F3EEE7F8</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>83A28F63-8A99-4F49-A9E9-C639F3EEE7F8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfcHJvdmlkZXJGaWxlUGF0aFN0cmluZyI6IlwvVXNlcnNcL2RhbmlsYW5kcml1c2NoZW5rb1wvUHJvamVjdHNcL0FuaW1hbFNvdW5kYm9hcmRcL0FuaW1hbFNvdW5kYm9hcmQueGNvZGVwcm9qIiwiYmx1ZXByaW50X2JsdWVwcmludElkZW50aWZpZXIiOiIxREZBM0Y1RTJBMzlEODg2MDAwNjYxQUYifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>710368076.16335106</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>83A28F63-8A99-4F49-A9E9-C639F3EEE7F8</string>
+		</dict>
+		<key>8CD3106E-735E-4776-B322-A7C6A2F064AD</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8CD3106E-735E-4776-B322-A7C6A2F064AD.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>710370675.52187395</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>8CD3106E-735E-4776-B322-A7C6A2F064AD</string>
+		</dict>
+		<key>A24B7537-AE6F-4EC8-B064-8187FFDCA4B0</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A24B7537-AE6F-4EC8-B064-8187FFDCA4B0.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9kYW5pbGFuZHJpdXNjaGVua29cL1Byb2plY3RzXC9BbmltYWxTb3VuZGJvYXJkXC9BbmltYWxTb3VuZGJvYXJkLnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>710370453.29150605</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>A24B7537-AE6F-4EC8-B064-8187FFDCA4B0</string>
+		</dict>
+		<key>AA5FAFE5-5C3B-4B9B-96BB-147A0D3E5B59</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>AA5FAFE5-5C3B-4B9B-96BB-147A0D3E5B59.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>710370453.29150605</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>AA5FAFE5-5C3B-4B9B-96BB-147A0D3E5B59</string>
+		</dict>
+		<key>BCB88426-E7F6-4622-999B-0E78ADA471A6</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>BCB88426-E7F6-4622-999B-0E78ADA471A6.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfcHJvdmlkZXJGaWxlUGF0aFN0cmluZyI6IlwvVXNlcnNcL2RhbmlsYW5kcml1c2NoZW5rb1wvUHJvamVjdHNcL0FuaW1hbFNvdW5kYm9hcmRcL0FuaW1hbFNvdW5kYm9hcmQueGNvZGVwcm9qIiwiYmx1ZXByaW50X2JsdWVwcmludElkZW50aWZpZXIiOiIxREZBM0Y1RTJBMzlEODg2MDAwNjYxQUYifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>710369578.46896696</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>BCB88426-E7F6-4622-999B-0E78ADA471A6</string>
+		</dict>
+		<key>C6740BB5-296B-402A-B000-B2FAA03972FD</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C6740BB5-296B-402A-B000-B2FAA03972FD.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9kYW5pbGFuZHJpdXNjaGVua29cL1Byb2plY3RzXC9BbmltYWxTb3VuZGJvYXJkXC9BbmltYWxTb3VuZGJvYXJkLnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>710368037.40507901</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>C6740BB5-296B-402A-B000-B2FAA03972FD</string>
+		</dict>
+		<key>C869BD38-4099-46D6-A4F4-420585085BCA</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C869BD38-4099-46D6-A4F4-420585085BCA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>710369578.46896696</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>C869BD38-4099-46D6-A4F4-420585085BCA</string>
+		</dict>
+		<key>CB7823CF-A96E-428E-8619-D99B2F5F9345</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>CB7823CF-A96E-428E-8619-D99B2F5F9345.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfcHJvdmlkZXJGaWxlUGF0aFN0cmluZyI6IlwvVXNlcnNcL2RhbmlsYW5kcml1c2NoZW5rb1wvUHJvamVjdHNcL0FuaW1hbFNvdW5kYm9hcmRcL0FuaW1hbFNvdW5kYm9hcmQueGNvZGVwcm9qIiwiYmx1ZXByaW50X2JsdWVwcmludElkZW50aWZpZXIiOiIxREZBM0Y1RTJBMzlEODg2MDAwNjYxQUYifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>710369772.013304</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>CB7823CF-A96E-428E-8619-D99B2F5F9345</string>
+		</dict>
+		<key>D2FCA6DC-DC9D-4D30-B208-D2062F18D4B9</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D2FCA6DC-DC9D-4D30-B208-D2062F18D4B9.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -116,7 +620,175 @@
 			<key>title</key>
 			<string>Build AnimalSoundboard</string>
 			<key>uniqueIdentifier</key>
-			<string>E1CB483A-0E78-4051-943F-8343B3CBE9B0</string>
+			<string>D2FCA6DC-DC9D-4D30-B208-D2062F18D4B9</string>
+		</dict>
+		<key>D6257327-99C8-496D-A143-5966AFB9E886</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D6257327-99C8-496D-A143-5966AFB9E886.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfcHJvdmlkZXJGaWxlUGF0aFN0cmluZyI6IlwvVXNlcnNcL2RhbmlsYW5kcml1c2NoZW5rb1wvUHJvamVjdHNcL0FuaW1hbFNvdW5kYm9hcmRcL0FuaW1hbFNvdW5kYm9hcmQueGNvZGVwcm9qIiwiYmx1ZXByaW50X2JsdWVwcmludElkZW50aWZpZXIiOiIxREZBM0Y1RTJBMzlEODg2MDAwNjYxQUYifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>710370453.29150605</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>D6257327-99C8-496D-A143-5966AFB9E886</string>
+		</dict>
+		<key>EA743313-039F-426B-9E99-6A1DFE67C4C7</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>EA743313-039F-426B-9E99-6A1DFE67C4C7.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>710368076.16335106</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>EA743313-039F-426B-9E99-6A1DFE67C4C7</string>
+		</dict>
+		<key>F28D7FF6-0153-43FA-BCEE-37F6A918E1A9</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F28D7FF6-0153-43FA-BCEE-37F6A918E1A9.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9kYW5pbGFuZHJpdXNjaGVua29cL1Byb2plY3RzXC9BbmltYWxTb3VuZGJvYXJkXC9BbmltYWxTb3VuZGJvYXJkLnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>710369846.08638</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>F28D7FF6-0153-43FA-BCEE-37F6A918E1A9</string>
+		</dict>
+		<key>FC4C9473-B2D3-41D6-ADFB-66299C9FD50A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FC4C9473-B2D3-41D6-ADFB-66299C9FD50A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>709921492.79644299</real>
+			<key>timeStoppedRecording</key>
+			<real>709921494.05463696</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>FC4C9473-B2D3-41D6-ADFB-66299C9FD50A</string>
+		</dict>
+		<key>FCA3C6C9-90D0-46C4-AB0C-1681B7CCDD8B</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FCA3C6C9-90D0-46C4-AB0C-1681B7CCDD8B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>710368037.40507901</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>FCA3C6C9-90D0-46C4-AB0C-1681B7CCDD8B</string>
+		</dict>
+		<key>FCF322D0-CDC5-4748-91F3-8762AE9402E1</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FCF322D0-CDC5-4748-91F3-8762AE9402E1.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfcHJvdmlkZXJGaWxlUGF0aFN0cmluZyI6IlwvVXNlcnNcL2RhbmlsYW5kcml1c2NoZW5rb1wvUHJvamVjdHNcL0FuaW1hbFNvdW5kYm9hcmRcL0FuaW1hbFNvdW5kYm9hcmQueGNvZGVwcm9qIiwiYmx1ZXByaW50X2JsdWVwcmludElkZW50aWZpZXIiOiIxREZBM0Y1RTJBMzlEODg2MDAwNjYxQUYifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>710369783.14172196</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>FCF322D0-CDC5-4748-91F3-8762AE9402E1</string>
 		</dict>
 	</dict>
 </dict>

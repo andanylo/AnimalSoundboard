@@ -12,7 +12,7 @@ class SoundManager{
     
     weak var animalInfo: AnimalInfo?
 
-    weak var soundHander: SoundHandler?
+    weak var soundHander: SoundHandler? = SoundHandler.shared
     var lastPlayingSound: Sound?
     
     ///Clear sound and call finish handler
@@ -28,6 +28,11 @@ class SoundManager{
         }
     }
     
+    //Has playing sounds
+    func hasPlayingSounds() -> Bool{
+        return lastPlayingSound != nil
+    }
+   
     
     
     func removeSound(sound: Sound, forced: Bool){
@@ -39,15 +44,15 @@ class SoundManager{
     func didFinish(sound: Sound){
         
         //If sound was force stopped, remove it
-        if sound.isForceStopped {
+//        if sound.isForceStopped {
             removeSound(sound: sound, forced: sound.isForceStopped)
-        }
-        else if ("Repeat" == "Repea"){
-            
-        }
-        else{
-            removeSound(sound: sound, forced: sound.isForceStopped)
-        }
+//        }
+//        else if ("Repeat" == "Repea"){
+//
+//        }
+//        else{
+//            removeSound(sound: sound, forced: sound.isForceStopped)
+//        }
     }
     
     func play(){

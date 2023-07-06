@@ -96,18 +96,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1DE1628F2A475FB600AE4CCD /* Models */ = {
+		1DCB2E262A575C000078FC35 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
-				1DE162922A475FEA00AE4CCD /* AnimalInfo.swift */,
-				1DE162942A47602400AE4CCD /* AnimalCellModel.swift */,
-				1DE162982A477BCC00AE4CCD /* FilesFetcher.swift */,
-				1DE1629E2A49DEAE00AE4CCD /* AnimalInfoCreator.swift */,
-				1DE162A02A49FD4A00AE4CCD /* CollectionViewModel.swift */,
 				1DE162962A4760B100AE4CCD /* SoundManager.swift */,
 				1D0B91382A508BC2000F3CB8 /* SoundHandler.swift */,
 				1D0B913A2A508F7D000F3CB8 /* PlayerManager.swift */,
 				1D0B913C2A5092B8000F3CB8 /* Sound.swift */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		1DCB2E272A575C0A0078FC35 /* Animal Info */ = {
+			isa = PBXGroup;
+			children = (
+				1DE162922A475FEA00AE4CCD /* AnimalInfo.swift */,
+				1DE162982A477BCC00AE4CCD /* FilesFetcher.swift */,
+				1DE1629E2A49DEAE00AE4CCD /* AnimalInfoCreator.swift */,
+			);
+			path = "Animal Info";
+			sourceTree = "<group>";
+		};
+		1DCB2E282A575C1E0078FC35 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				1DE162942A47602400AE4CCD /* AnimalCellModel.swift */,
+				1DE162A02A49FD4A00AE4CCD /* CollectionViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		1DE1628F2A475FB600AE4CCD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1DCB2E282A575C1E0078FC35 /* View Models */,
+				1DCB2E272A575C0A0078FC35 /* Animal Info */,
+				1DCB2E262A575C000078FC35 /* Sound */,
 			);
 			path = Models;
 			sourceTree = "<group>";

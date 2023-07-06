@@ -43,6 +43,8 @@ class ViewController: UIViewController {
         
         self.view.backgroundColor = .white
         
+        SoundHandler.shared.viewController = self
+        
         self.dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: {  collectionView, indexPath, model in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewIdentifiers.cell.rawValue, for: indexPath) as? AnimalCell else{
                 return UICollectionViewCell()
