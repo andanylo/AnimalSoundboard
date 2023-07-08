@@ -94,10 +94,7 @@ class ViewController: UIViewController {
     }
     
     
-    ///Create animal cell models from scrath
-//    func createAnimalCellModels() -> [AnimalCellModel]{
-//
-//    }
+
 
 
 }

@@ -14,10 +14,7 @@ class SoundHandler: NSObject, SoundDelegate{
         }
         
         DispatchQueue.main.async{
-//            if soundManager.blockSound?.fullName != "Random sound.mp3" && !controller.toolBar.hasAnimation{
-//                controller.toolBar.animation()
-//            }
-            
+
             playingCell.didStopPlaying(forced: forced)
         }
     }
@@ -31,6 +28,13 @@ class SoundHandler: NSObject, SoundDelegate{
     }
     
     func didStartPlaying(soundManager: SoundManager?) {
+        DispatchQueue.main.async {
+            guard let playingCell = self.findPlayingCell(soundManager: soundManager) else{
+                return
+            }
+            
+            playingCell.didStartPlaying()
+        }
         
     }
     
@@ -45,12 +49,28 @@ class SoundHandler: NSObject, SoundDelegate{
     static let shared = SoundHandler()
     
     weak var viewController: ViewController?
+    
+    func stop(player: AVAudioPlayer){
+    
+        guard let sound = PlayerManager.shared.players.first(where: {$0.player === player}) else{
+            return
+        }
+        
+    
+        
+        sound.soundManager?.didFinish(sound: sound)
+    }
+    
+    
+    
 }
 
 
 
 extension SoundHandler: AVAudioPlayerDelegate{
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        print("finsihed")
+        
         guard let sound = PlayerManager.shared.players.first(where: {$0.player === player}) else{
             return
         }

@@ -8,7 +8,7 @@
 import Foundation
 import AVFoundation
 class Sound{
-    var player: AVAudioPlayer = AVAudioPlayer()
+    var player: Player = Player()
     weak var soundManager: SoundManager?{
         didSet{
             if let oldSoundManager = oldValue, !(oldSoundManager === soundManager){
@@ -26,8 +26,8 @@ class Sound{
     
     
     func clear(){
-        forceStop()
-        player = AVAudioPlayer()
+        //forceStop()
+        player = Player()
         isForceStopped = false
         soundManager = nil
     }
@@ -35,6 +35,7 @@ class Sound{
     func forceStop(){
         isForceStopped = true
         player.stop()
+        
     }
     
     
@@ -50,7 +51,7 @@ class Sound{
             let changed = url != self.player.url
             if changed {
                 do{
-                    self.player = try AVAudioPlayer(contentsOf: url)
+                    self.player = try Player(contentsOf: url)
                     self.player.delegate = self.soundManager?.soundHander
                     self.player.volume = 1.0
                 }
@@ -74,8 +75,6 @@ class Sound{
             player.prepareToPlay()
             player.play()
             
-            
-            print(PlayerManager.shared.players.map({$0.isPlaying}))
         }
         catch{
             
@@ -90,5 +89,13 @@ class Sound{
         
         try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.mixWithOthers])
         try AVAudioSession.sharedInstance().setActive(true)
+    }
+}
+
+class Player: AVAudioPlayer{
+    override func stop() {
+        super.stop()
+        
+        self.delegate?.audioPlayerDidFinishPlaying?(self, successfully: false)
     }
 }

@@ -34,12 +34,24 @@ class AnimalCell: UICollectionViewCell{
         return label
     }()
     
-    //
+    ///Preview image
     lazy var previewImageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect.zero)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         return imageView
+    }()
+    
+    
+    ///Stop button
+    lazy var stopButton: UIButton = {
+        let stopButton =  UIButton(type: .custom)
+        
+        stopButton.translatesAutoresizingMaskIntoConstraints = false
+        stopButton.addTarget(self, action: #selector(stopSound), for: .touchUpInside)
+        stopButton.setImage(UIImage(named: "Pause"), for: .normal)
+        
+        return stopButton
     }()
     
     
@@ -99,7 +111,36 @@ class AnimalCell: UICollectionViewCell{
     }
     
     func enterPlayState(){
+        DispatchQueue.main.async {
+            self.stopButtonStatus(hide: false)
+        }
+    }
+    
+    
+    func stopButtonStatus(hide: Bool){
+        if hide{
+            self.stopButton.removeFromSuperview()
+        }
+        else{
+            self.contentView.addSubview(self.stopButton)
+            
+            stopButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -7).isActive = true
+            stopButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 7).isActive = true
+            
+            let heightButton = min(43, self.frame.height / 3)
+            
+            
+            stopButton.heightAnchor.constraint(equalToConstant: heightButton).isActive = true
+            stopButton.widthAnchor.constraint(equalTo: stopButton.heightAnchor, multiplier: 0.625).isActive = true
+        }
+    }
+    
+    @objc func stopSound(){
+        guard let animalInfo = self.animalCellModel?.animalInfo else{
+            return
+        }
         
+        PlayerManager.shared.stopAllSounds(soundManager: animalInfo.soundManager)
     }
     
     
@@ -110,6 +151,7 @@ class AnimalCell: UICollectionViewCell{
     ///Will start playing
     func willStartPlaying(){
         impulseAnimation()
+        stopButtonStatus(hide: false)
     }
     
     
@@ -120,12 +162,16 @@ class AnimalCell: UICollectionViewCell{
     
     ///Did stop playing
     func didStopPlaying(forced: Bool){
+        DispatchQueue.main.async {
+            self.stopButtonStatus(hide: true)
+        }
         if forced == true{
-            stopAnimation()
+            self.stopAnimation()
         }
         else{
-            backToNormalAnimation()
+            self.backToNormalAnimation()
         }
+        
     }
     
     
