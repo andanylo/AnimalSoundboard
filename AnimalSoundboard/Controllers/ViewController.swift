@@ -34,6 +34,32 @@ class ViewController: UIViewController {
         return collectionView
     }()
     
+    
+    ///Stop all button
+    lazy var stopAllButton: UIButton = {
+        let button = UIButton()
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Stop all", for: .normal)
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.backgroundColor = UIColor(red: 0, green: 0.5, blue: 1, alpha: 1)
+        button.layer.cornerRadius = 15
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowRadius = 5
+        button.layer.shadowOffset = CGSize(width: 0.5, height: 1)
+        button.layer.shadowOpacity = 0.6
+        button.heightAnchor.constraint(equalToConstant: 45).isActive = true
+        button.addTarget(self, action: #selector(stopAll), for: .touchUpInside)
+        
+        return button
+        
+        
+    }()
+    
+    @objc func stopAll(){
+        PlayerManager.shared.stopAllSounds(soundManager: nil)
+    }
+    
     private var dataSource: UICollectionViewDiffableDataSource<Section, AnimalCellModel>?
     
     
@@ -75,6 +101,13 @@ class ViewController: UIViewController {
                 self?.dataSource?.apply(snapshot, animatingDifferences: true)
             }
         }
+        
+        
+        self.view.addSubview(stopAllButton)
+        
+        stopAllButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -5).isActive = true
+        stopAllButton.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 15).isActive = true
+        stopAllButton.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -15).isActive = true
     }
     
     enum Section{
