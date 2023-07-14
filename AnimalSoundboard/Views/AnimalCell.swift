@@ -15,6 +15,15 @@ class AnimalCell: UICollectionViewCell{
         self.nameLabel.removeFromSuperview()
         
         self.previewImageView.removeFromSuperview()
+        self.stopButton.removeFromSuperview()
+        
+        self.animatedImageView?.image = nil
+        self.animatedImageView?.DeInitialization()
+        
+        self.animatedImageView?.model?.animatedImageView = nil
+        self.animatedImageView?.model = nil
+        
+        self.nameLabel.isHidden = false
         
         self.removeGestureRecognizer(tapGestureRecognizer)
         self.layer.removeAllAnimations()
@@ -33,6 +42,9 @@ class AnimalCell: UICollectionViewCell{
         label.textAlignment = .center
         return label
     }()
+    
+    
+    var animatedImageView: AnimatedImageView?
     
     ///Preview image
     lazy var previewImageView: UIImageView = {
@@ -68,7 +80,7 @@ class AnimalCell: UICollectionViewCell{
         self.contentView.layer.borderWidth = 0.5
         self.contentView.layer.borderColor = UIColor.black.cgColor
         self.contentView.clipsToBounds = true
-        
+        ///Set preview image view
         if previewImageView.superview == nil{
             self.contentView.addSubview(previewImageView)
             
@@ -86,6 +98,28 @@ class AnimalCell: UICollectionViewCell{
         }
         
         
+        ///Set animated image view
+        if let model = animalCellModel?.animatedImageViewModel{
+            if animatedImageView?.superview == nil {
+                if animatedImageView == nil{
+                    animatedImageView = AnimatedImageView(model: model)
+                    animatedImageView?.contentMode = .scaleAspectFit
+                    animatedImageView?.translatesAutoresizingMaskIntoConstraints = false
+                }
+                else{
+                    animatedImageView?.model = model
+                }
+                
+                self.contentView.addSubview(animatedImageView!)
+                
+                animatedImageView?.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
+                animatedImageView?.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor).isActive = true
+                animatedImageView?.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor).isActive = true
+                animatedImageView?.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor).isActive = true
+            }
+        }
+        
+        ///Set label
         if nameLabel.superview == nil{
             self.contentView.addSubview(nameLabel)
             
@@ -113,6 +147,8 @@ class AnimalCell: UICollectionViewCell{
     func enterPlayState(){
         DispatchQueue.main.async {
             self.stopButtonStatus(hide: false)
+            self.nameLabel.isHidden = self.animatedImageView?.model != nil
+            self.animatedImageView?.loadGif()
         }
     }
     
@@ -152,18 +188,40 @@ class AnimalCell: UICollectionViewCell{
     func willStartPlaying(){
         impulseAnimation()
         stopButtonStatus(hide: false)
+        
+        
+        ///Hide name label
+        if animalCellModel?.animatedImageViewModel != nil{
+            nameLabel.isHidden = true
+            ///Start animating, set first frame
+            ///Set first image
+            guard let model = self.animatedImageView?.model else{
+                return
+            }
+            
+            model.dispatchQueue.async {
+                model.getNumberOfFrames(completion: { numberOfFrames in
+                    model.setCurrentImage(frame: 0)
+                })
+            }
+        }
+        
+        
+        
     }
     
     
     ///Did start playing
     func didStartPlaying(){
-        
+        animatedImageView?.loadGif()
     }
     
     ///Did stop playing
     func didStopPlaying(forced: Bool){
         DispatchQueue.main.async {
+            self.animatedImageView?.stopAnimating()
             self.stopButtonStatus(hide: true)
+            self.nameLabel.isHidden = false
         }
         if forced == true{
             self.stopAnimation()
@@ -171,6 +229,8 @@ class AnimalCell: UICollectionViewCell{
         else{
             self.backToNormalAnimation()
         }
+        
+        
         
     }
     

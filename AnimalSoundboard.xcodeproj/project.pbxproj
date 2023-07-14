@@ -10,6 +10,10 @@
 		1D0B91392A508BC2000F3CB8 /* SoundHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B91382A508BC2000F3CB8 /* SoundHandler.swift */; };
 		1D0B913B2A508F7D000F3CB8 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B913A2A508F7D000F3CB8 /* PlayerManager.swift */; };
 		1D0B913D2A5092B8000F3CB8 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B913C2A5092B8000F3CB8 /* Sound.swift */; };
+		1DC1130E2A60DEDD009BE2FF /* AnimatedImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1130D2A60DEDD009BE2FF /* AnimatedImageViewModel.swift */; };
+		1DC113102A60DF1B009BE2FF /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1130F2A60DF1B009BE2FF /* AnimatedImageView.swift */; };
+		1DC113122A60DF54009BE2FF /* VideoTimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC113112A60DF54009BE2FF /* VideoTimerModel.swift */; };
+		1DC113142A60DF70009BE2FF /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC113132A60DF70009BE2FF /* VideoModel.swift */; };
 		1DE162932A475FEA00AE4CCD /* AnimalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE162922A475FEA00AE4CCD /* AnimalInfo.swift */; };
 		1DE162952A47602400AE4CCD /* AnimalCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE162942A47602400AE4CCD /* AnimalCellModel.swift */; };
 		1DE162972A4760B100AE4CCD /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE162962A4760B100AE4CCD /* SoundManager.swift */; };
@@ -49,6 +53,10 @@
 		1D0B91382A508BC2000F3CB8 /* SoundHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundHandler.swift; sourceTree = "<group>"; };
 		1D0B913A2A508F7D000F3CB8 /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
 		1D0B913C2A5092B8000F3CB8 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		1DC1130D2A60DEDD009BE2FF /* AnimatedImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedImageViewModel.swift; sourceTree = "<group>"; };
+		1DC1130F2A60DF1B009BE2FF /* AnimatedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedImageView.swift; sourceTree = "<group>"; };
+		1DC113112A60DF54009BE2FF /* VideoTimerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTimerModel.swift; sourceTree = "<group>"; };
+		1DC113132A60DF70009BE2FF /* VideoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		1DE162922A475FEA00AE4CCD /* AnimalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalInfo.swift; sourceTree = "<group>"; };
 		1DE162942A47602400AE4CCD /* AnimalCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCellModel.swift; sourceTree = "<group>"; };
 		1DE162962A4760B100AE4CCD /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
@@ -96,6 +104,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DC1130C2A60DECF009BE2FF /* Video Models */ = {
+			isa = PBXGroup;
+			children = (
+				1DC113132A60DF70009BE2FF /* VideoModel.swift */,
+				1DC113112A60DF54009BE2FF /* VideoTimerModel.swift */,
+				1DC1130D2A60DEDD009BE2FF /* AnimatedImageViewModel.swift */,
+			);
+			path = "Video Models";
+			sourceTree = "<group>";
+		};
 		1DCB2E262A575C000078FC35 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +147,7 @@
 		1DE1628F2A475FB600AE4CCD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1DC1130C2A60DECF009BE2FF /* Video Models */,
 				1DCB2E282A575C1E0078FC35 /* View Models */,
 				1DCB2E272A575C0A0078FC35 /* Animal Info */,
 				1DCB2E262A575C000078FC35 /* Sound */,
@@ -139,6 +158,7 @@
 		1DE162902A475FBC00AE4CCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1DC1130F2A60DF1B009BE2FF /* AnimatedImageView.swift */,
 				1DE162A22A4B790500AE4CCD /* AnimalCell.swift */,
 			);
 			path = Views;
@@ -338,11 +358,15 @@
 			files = (
 				1D0B913D2A5092B8000F3CB8 /* Sound.swift in Sources */,
 				1DE1629F2A49DEAE00AE4CCD /* AnimalInfoCreator.swift in Sources */,
+				1DC113102A60DF1B009BE2FF /* AnimatedImageView.swift in Sources */,
 				1DE162952A47602400AE4CCD /* AnimalCellModel.swift in Sources */,
 				1D0B913B2A508F7D000F3CB8 /* PlayerManager.swift in Sources */,
 				1DFA3F672A39D886000661AF /* ViewController.swift in Sources */,
 				1D0B91392A508BC2000F3CB8 /* SoundHandler.swift in Sources */,
 				1DFA3F632A39D886000661AF /* AppDelegate.swift in Sources */,
+				1DC113142A60DF70009BE2FF /* VideoModel.swift in Sources */,
+				1DC1130E2A60DEDD009BE2FF /* AnimatedImageViewModel.swift in Sources */,
+				1DC113122A60DF54009BE2FF /* VideoTimerModel.swift in Sources */,
 				1DFA3F652A39D886000661AF /* SceneDelegate.swift in Sources */,
 				1DE162972A4760B100AE4CCD /* SoundManager.swift in Sources */,
 				1DE162A12A49FD4A00AE4CCD /* CollectionViewModel.swift in Sources */,

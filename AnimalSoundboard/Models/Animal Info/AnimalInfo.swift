@@ -16,6 +16,9 @@ class AnimalInfo{
     ///Url for an image
     var image: URL?
     
+    ///Url for a video
+    var video: URL?
+    
     ///Name for a sound
     var name: String
     
@@ -24,10 +27,11 @@ class AnimalInfo{
         return SoundManager(animalInfo: self)
     }()
     
-    init(url: URL, image: URL? = nil){
+    init(url: URL, image: URL? = nil, video: URL? = nil){
         self.url = url
         self.image = image
         self.name = url.lastPathComponent
+        self.video = video
     }
     
     ///Init from filefetch
@@ -37,6 +41,9 @@ class AnimalInfo{
             self.image = URL(filePath: imagePath)
         }
         self.name = fileFetch.name
+        if let videoPAth = fileFetch.videoPath{
+            self.video = URL(filePath: videoPAth)
+        }
     }
     
     

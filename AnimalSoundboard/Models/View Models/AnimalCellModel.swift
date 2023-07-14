@@ -24,6 +24,14 @@ class AnimalCellModel: Hashable{
     ///Animal info object that has an url and sound manager to play a sound
     var animalInfo: AnimalInfo?
     
+    ///View model for animated image
+    lazy var animatedImageViewModel: VideoModel? = {
+        guard let animalInfo = self.animalInfo, let animatedFilePath = animalInfo.video?.path else{
+            return nil
+        }
+        return VideoModel(animatedFilePath: animatedFilePath, animalInfo: animalInfo)
+    }()
+    
     var displayedName: String{
         get{
             return animalInfo?.name ?? ""

@@ -15,6 +15,7 @@ class FilesFetcher{
         var name: String
         var filePath: String
         var imagePath: String?
+        var videoPath: String?
     }
     
     
@@ -47,8 +48,16 @@ class FilesFetcher{
                 })
                 let imagePath = imageFile == nil ? nil : folderPath + "/" + imageFile!
                 
+                
+                let videoFile = contents.first(where: {
+                    let suffix = $0.suffix(4)
+                    return suffix == ".mp4"
+                })
+                let videoPath = videoFile == nil ? nil : folderPath + "/" + videoFile!
+                
+                
                 //Create object
-                let fileFetch = FileFetch(name: folder, filePath: folderPath + "/" + soundFile, imagePath: imagePath)
+                let fileFetch = FileFetch(name: folder, filePath: folderPath + "/" + soundFile, imagePath: imagePath, videoPath: videoPath)
                 result.append(fileFetch)
             }
             completion(result)
