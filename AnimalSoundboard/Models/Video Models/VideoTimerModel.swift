@@ -36,7 +36,6 @@ class VideoTimerModel{
     
     func startTimer(with: AnimatedImageViewModel){
         linkedImageModels.append(with)
-        
         startTimer()
     }
     
@@ -45,6 +44,7 @@ class VideoTimerModel{
         
         //Start timer
         timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true, block: { [weak self] _ in
+            
             if let linkedModels = self?.linkedImageModels{
                 for model in linkedModels {
                     if model.animatedImageView != nil && model.animatedImageView?.animatingImgs == true{

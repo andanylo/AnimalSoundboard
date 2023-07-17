@@ -128,7 +128,6 @@ class AnimatedImageViewModel{
                     DispatchQueue.main.async {
                         if self?.animatedImageView?.animatingImgs == true{
                             self?.animatedImageView?.image = image
-                            print(self?.animatedImageView?.image)
                         }
                     }
                 })

@@ -19,9 +19,9 @@ class AnimatedImageView: UIImageView{
             if oldValue?.animatedImageView === self{
                 oldValue?.unbindImageView()
             }
-//            if model != nil{
-//                setModelImage(animated: true)
-//            }
+            if model != nil{
+                model?.bindWithImageView(imageView: self)
+            }
         }
     }
     
@@ -29,7 +29,6 @@ class AnimatedImageView: UIImageView{
     
     //Start animation
     override func startAnimating() {
-        
         //Set current frame based on current player time
         guard let model = self.model else{
             return
@@ -41,6 +40,7 @@ class AnimatedImageView: UIImageView{
         
         animatingImgs = true
 
+        
         VideoTimerModel.shared.addAnimateImageModel(model: model)
         
         
@@ -102,6 +102,7 @@ class AnimatedImageView: UIImageView{
             guard let model = self.model else{
                 return
             }
+            
             model.returnCurrentFrame(completion: { frame in
                 model.setCurrentImage(frame: frame )
             })

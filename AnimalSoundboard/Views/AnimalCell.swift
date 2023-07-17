@@ -23,6 +23,8 @@ class AnimalCell: UICollectionViewCell{
         self.animatedImageView?.model?.animatedImageView = nil
         self.animatedImageView?.model = nil
         
+        self.animatedImageView?.removeFromSuperview()
+        
         self.nameLabel.isHidden = false
         
         self.removeGestureRecognizer(tapGestureRecognizer)
@@ -96,6 +98,11 @@ class AnimalCell: UICollectionViewCell{
                 }
             })
         }
+        else if let image = animalCellModel?.previewImage{
+            DispatchQueue.main.async {
+                self.previewImageView.image = image
+            }
+        }
         
         
         ///Set animated image view
@@ -111,7 +118,6 @@ class AnimalCell: UICollectionViewCell{
                 }
                 
                 self.contentView.addSubview(animatedImageView!)
-                
                 animatedImageView?.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
                 animatedImageView?.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor).isActive = true
                 animatedImageView?.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor).isActive = true

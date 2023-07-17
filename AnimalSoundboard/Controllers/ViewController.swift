@@ -52,9 +52,25 @@ class ViewController: UIViewController {
         button.addTarget(self, action: #selector(stopAll), for: .touchUpInside)
         
         return button
-        
-        
     }()
+    
+    
+    ///Search view on top
+    lazy var searchView: SearchView = {
+        return SearchView(frame: CGRect.zero)
+    }()
+    
+    
+    ///Calculated search view height with safe are
+    private var searchViewHeight: CGFloat{
+        get{
+            return self.view.safeAreaInsets.top + 60
+        }
+        
+    }
+    
+    var topConstraint: NSLayoutConstraint!
+    var heightConstraint: NSLayoutConstraint?
     
     @objc func stopAll(){
         PlayerManager.shared.stopAllSounds(soundManager: nil)
@@ -62,10 +78,15 @@ class ViewController: UIViewController {
     
     private var dataSource: UICollectionViewDiffableDataSource<Section, AnimalCellModel>?
     
+    override func viewDidLayoutSubviews() {
+        if heightConstraint?.constant != searchViewHeight{
+            heightConstraint?.constant = searchViewHeight
+            collectionView.contentInset.top = searchView.frame.height
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         self.view.backgroundColor = .white
         
@@ -108,6 +129,27 @@ class ViewController: UIViewController {
         stopAllButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -5).isActive = true
         stopAllButton.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 15).isActive = true
         stopAllButton.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -15).isActive = true
+        
+        
+        ///Search view on top
+        self.view.addSubview(searchView)
+        
+        
+        searchView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        searchView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        heightConstraint = self.searchView.heightAnchor.constraint(equalToConstant: searchViewHeight)
+        heightConstraint?.isActive = true
+        
+        
+        topConstraint = searchView.topAnchor.constraint(equalTo: self.view.topAnchor)
+        topConstraint?.isActive = true
+        
+        
+        
+        self.view.layoutIfNeeded()
+        
+        
+        
     }
     
     enum Section{
@@ -126,6 +168,44 @@ class ViewController: UIViewController {
         return snapshot
     }
     
+    
+    private var lastScroll: CGFloat = 0
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentOffset = scrollView.contentOffset.y
+        
+        
+        ///Show the search bar if scrolled past the top
+        ///
+        guard scrollView.isDragging else{
+            lastScroll = contentOffset
+            return
+        }
+        
+        let delta = contentOffset - lastScroll
+        let constant = topConstraint.constant - delta
+        let searchTopConstraint = max(constant < 0 ? constant : 0, -searchView.frame.height)
+        
+       
+        ///CONST >= (-HEIGHT) - hide
+        ///CONST <= 0 - show
+        //show search bar
+        if topConstraint.constant != searchTopConstraint && scrollView.contentOffset.y + scrollView.frame.height < scrollView.contentSize.height && searchView.searchBar.text?.isEmpty != false{
+            if delta < 0{
+                topConstraint.constant = searchTopConstraint
+                collectionView.contentInset.top = searchView.frame.height - self.view.safeAreaInsets.top + topConstraint.constant
+            }
+            else{
+                print(scrollView.contentOffset.y)
+                if scrollView.contentOffset.y > -searchView.frame.height {
+                    topConstraint.constant = searchTopConstraint
+                    collectionView.contentInset.top = searchView.frame.height - self.view.safeAreaInsets.top + topConstraint.constant
+                }
+            }
+
+            self.view.layoutIfNeeded()
+        }
+        lastScroll = contentOffset
+    }
     
 
 

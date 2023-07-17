@@ -69,7 +69,6 @@ class SoundHandler: NSObject, SoundDelegate{
 
 extension SoundHandler: AVAudioPlayerDelegate{
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        print("finsihed")
         
         guard let sound = PlayerManager.shared.players.first(where: {$0.player === player}) else{
             return
