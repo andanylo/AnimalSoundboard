@@ -118,7 +118,6 @@ class ViewController: UIViewController {
                 return
             }
             DispatchQueue.main.async {
-                
                 self?.dataSource?.apply(snapshot, animatingDifferences: true)
             }
         }
@@ -149,6 +148,16 @@ class ViewController: UIViewController {
         self.view.layoutIfNeeded()
         
         
+        ///On search text change
+        searchView.textDidChange = { [weak self] searchText in
+            self?.collectionViewModel.displayedFilterName = searchText
+            guard let snapshot = self?.createSnapshot(cellModels: self?.collectionViewModel.displayedAnimalCellModels ?? []) else{
+                return
+            }
+            DispatchQueue.main.async {
+                self?.dataSource?.apply(snapshot, animatingDifferences: true)
+            }
+        }
         
     }
     
@@ -192,13 +201,13 @@ class ViewController: UIViewController {
         if topConstraint.constant != searchTopConstraint && scrollView.contentOffset.y + scrollView.frame.height < scrollView.contentSize.height && searchView.searchBar.text?.isEmpty != false{
             if delta < 0{
                 topConstraint.constant = searchTopConstraint
-                collectionView.contentInset.top = searchView.frame.height - self.view.safeAreaInsets.top + topConstraint.constant
+                //collectionView.contentInset.top = searchView.frame.height - self.view.safeAreaInsets.top + topConstraint.constant
             }
             else{
                 print(scrollView.contentOffset.y)
-                if scrollView.contentOffset.y > -searchView.frame.height {
+                if scrollView.contentOffset.y >= -searchView.frame.height {
                     topConstraint.constant = searchTopConstraint
-                    collectionView.contentInset.top = searchView.frame.height - self.view.safeAreaInsets.top + topConstraint.constant
+                    //collectionView.contentInset.top = searchView.frame.height - self.view.safeAreaInsets.top + topConstraint.constant
                 }
             }
 

@@ -27,9 +27,11 @@ class CollectionViewModel{
     ///Animal cell models to display in collection view
     var displayedAnimalCellModels: [AnimalCellModel]{
         get{
-            return animalCellModels
+            return animalCellModels.filter({displayedFilterName == nil || displayedFilterName?.isEmpty == true ? true : $0.displayedName.contains(displayedFilterName!)})
         }
     }
+    
+    var displayedFilterName: String? = nil
     
     
     init(rootViewController: ViewController){

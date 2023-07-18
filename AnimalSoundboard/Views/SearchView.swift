@@ -12,12 +12,19 @@ class SearchView: UIView{
     ///Search bar
     lazy var searchBar: UISearchBar = {
         let searchbar = UISearchBar()
-        searchbar.showsCancelButton = true
+        //searchbar.showsCancelButton = true
+        searchbar.searchTextField.clearButtonMode = .whileEditing
+        searchbar.searchTextField.placeholder = "Enter the name of the sound here"
         searchbar.searchBarStyle = .minimal
+        searchbar.delegate = self
         searchbar.sizeToFit()
         searchbar.translatesAutoresizingMaskIntoConstraints = false
         return searchbar
     }()
+    
+    
+    var textDidChange: ((String) -> Void)?
+    
     
     
     override init(frame: CGRect) {
@@ -41,4 +48,11 @@ class SearchView: UIView{
     
     
     
+}
+
+
+extension SearchView: UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        textDidChange?(searchText)
+    }
 }
