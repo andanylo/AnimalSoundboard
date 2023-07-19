@@ -27,7 +27,8 @@ class AnimalCell: UICollectionViewCell{
         
         self.nameLabel.isHidden = false
         
-        self.removeGestureRecognizer(tapGestureRecognizer)
+        self.contentView.removeGestureRecognizer(tapGestureRecognizer)
+        self.contentView.removeGestureRecognizer(longGestureRecognizer)
         self.layer.removeAllAnimations()
         
     }
@@ -73,6 +74,12 @@ class AnimalCell: UICollectionViewCell{
         let gesture = UITapGestureRecognizer(target: self, action: #selector(playFromPlayer))
         return gesture
     }()
+    
+    
+    lazy var longGestureRecognizer: UILongPressGestureRecognizer = {
+        let gesture = UILongPressGestureRecognizer(target: self, action: #selector(presentOptions))
+        return gesture
+    }
     
     func start(with: AnimalCellModel){
         self.animalCellModel = with
@@ -147,6 +154,14 @@ class AnimalCell: UICollectionViewCell{
             self.animate()
             self.enterPlayState()
         }
+        
+        self.contentView.addGestureRecognizer(longGestureRecognizer)
+        
+        
+    }
+    
+    ///Present options window
+    func presentOptions(){
         
     }
     

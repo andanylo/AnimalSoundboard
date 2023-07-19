@@ -15,6 +15,11 @@
 		1DC113122A60DF54009BE2FF /* VideoTimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC113112A60DF54009BE2FF /* VideoTimerModel.swift */; };
 		1DC113142A60DF70009BE2FF /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC113132A60DF70009BE2FF /* VideoModel.swift */; };
 		1DC113162A65C468009BE2FF /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC113152A65C468009BE2FF /* SearchView.swift */; };
+		1DC1131C2A688CB4009BE2FF /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1131B2A688CB4009BE2FF /* Animator.swift */; };
+		1DC1131E2A688D21009BE2FF /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1131D2A688D21009BE2FF /* CustomPicker.swift */; };
+		1DC113202A688DB2009BE2FF /* CustomPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1131F2A688DB2009BE2FF /* CustomPickerView.swift */; };
+		1DC113222A688DB3009BE2FF /* CustomActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC113212A688DB3009BE2FF /* CustomActionCell.swift */; };
+		1DC113242A688DFF009BE2FF /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC113232A688DFF009BE2FF /* CustomViewController.swift */; };
 		1DE162932A475FEA00AE4CCD /* AnimalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE162922A475FEA00AE4CCD /* AnimalInfo.swift */; };
 		1DE162952A47602400AE4CCD /* AnimalCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE162942A47602400AE4CCD /* AnimalCellModel.swift */; };
 		1DE162972A4760B100AE4CCD /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE162962A4760B100AE4CCD /* SoundManager.swift */; };
@@ -59,6 +64,11 @@
 		1DC113112A60DF54009BE2FF /* VideoTimerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTimerModel.swift; sourceTree = "<group>"; };
 		1DC113132A60DF70009BE2FF /* VideoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		1DC113152A65C468009BE2FF /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		1DC1131B2A688CB4009BE2FF /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		1DC1131D2A688D21009BE2FF /* CustomPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
+		1DC1131F2A688DB2009BE2FF /* CustomPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerView.swift; sourceTree = "<group>"; };
+		1DC113212A688DB3009BE2FF /* CustomActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActionCell.swift; sourceTree = "<group>"; };
+		1DC113232A688DFF009BE2FF /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		1DE162922A475FEA00AE4CCD /* AnimalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalInfo.swift; sourceTree = "<group>"; };
 		1DE162942A47602400AE4CCD /* AnimalCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCellModel.swift; sourceTree = "<group>"; };
 		1DE162962A4760B100AE4CCD /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
@@ -149,6 +159,7 @@
 		1DE1628F2A475FB600AE4CCD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1DC1131B2A688CB4009BE2FF /* Animator.swift */,
 				1DC1130C2A60DECF009BE2FF /* Video Models */,
 				1DCB2E282A575C1E0078FC35 /* View Models */,
 				1DCB2E272A575C0A0078FC35 /* Animal Info */,
@@ -160,6 +171,8 @@
 		1DE162902A475FBC00AE4CCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1DC113212A688DB3009BE2FF /* CustomActionCell.swift */,
+				1DC1131F2A688DB2009BE2FF /* CustomPickerView.swift */,
 				1DC1130F2A60DF1B009BE2FF /* AnimatedImageView.swift */,
 				1DE162A22A4B790500AE4CCD /* AnimalCell.swift */,
 				1DC113152A65C468009BE2FF /* SearchView.swift */,
@@ -171,6 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				1DFA3F662A39D886000661AF /* ViewController.swift */,
+				1DC113232A688DFF009BE2FF /* CustomViewController.swift */,
+				1DC1131D2A688D21009BE2FF /* CustomPicker.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -359,15 +374,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DC1131C2A688CB4009BE2FF /* Animator.swift in Sources */,
 				1D0B913D2A5092B8000F3CB8 /* Sound.swift in Sources */,
+				1DC113242A688DFF009BE2FF /* CustomViewController.swift in Sources */,
 				1DE1629F2A49DEAE00AE4CCD /* AnimalInfoCreator.swift in Sources */,
+				1DC113202A688DB2009BE2FF /* CustomPickerView.swift in Sources */,
 				1DC113102A60DF1B009BE2FF /* AnimatedImageView.swift in Sources */,
 				1DE162952A47602400AE4CCD /* AnimalCellModel.swift in Sources */,
 				1D0B913B2A508F7D000F3CB8 /* PlayerManager.swift in Sources */,
 				1DFA3F672A39D886000661AF /* ViewController.swift in Sources */,
+				1DC113222A688DB3009BE2FF /* CustomActionCell.swift in Sources */,
 				1D0B91392A508BC2000F3CB8 /* SoundHandler.swift in Sources */,
 				1DFA3F632A39D886000661AF /* AppDelegate.swift in Sources */,
 				1DC113142A60DF70009BE2FF /* VideoModel.swift in Sources */,
+				1DC1131E2A688D21009BE2FF /* CustomPicker.swift in Sources */,
 				1DC1130E2A60DEDD009BE2FF /* AnimatedImageViewModel.swift in Sources */,
 				1DC113162A65C468009BE2FF /* SearchView.swift in Sources */,
 				1DC113122A60DF54009BE2FF /* VideoTimerModel.swift in Sources */,

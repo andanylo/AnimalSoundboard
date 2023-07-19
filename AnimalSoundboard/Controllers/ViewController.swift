@@ -204,7 +204,6 @@ class ViewController: UIViewController {
                 //collectionView.contentInset.top = searchView.frame.height - self.view.safeAreaInsets.top + topConstraint.constant
             }
             else{
-                print(scrollView.contentOffset.y)
                 if scrollView.contentOffset.y >= -searchView.frame.height {
                     topConstraint.constant = searchTopConstraint
                     //collectionView.contentInset.top = searchView.frame.height - self.view.safeAreaInsets.top + topConstraint.constant
@@ -215,6 +214,8 @@ class ViewController: UIViewController {
         }
         lastScroll = contentOffset
     }
+    
+    
     
 
 
