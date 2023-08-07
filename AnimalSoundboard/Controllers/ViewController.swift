@@ -114,6 +114,9 @@ class ViewController: UIViewController {
         dataSource?.apply(snapshot, animatingDifferences: true)
         
         collectionViewModel.fetchAndCreateAnimalCellModels { [weak self] cellModels in
+            for cellModel in cellModels {
+                cellModel.viewController = self
+            }
             guard let snapshot = self?.createSnapshot(cellModels: cellModels) else{
                 return
             }

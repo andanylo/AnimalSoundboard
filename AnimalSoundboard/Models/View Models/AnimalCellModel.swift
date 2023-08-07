@@ -41,6 +41,8 @@ class AnimalCellModel: Hashable{
     
     var previewImage: UIImage?
     
+    weak var viewController: ViewController?
+    
     init(identifier: String){
         self.identifier = identifier
     }

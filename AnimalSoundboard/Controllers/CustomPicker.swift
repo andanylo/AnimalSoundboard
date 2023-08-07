@@ -49,22 +49,22 @@ class CustomPicker: UIViewController{
         
        
     }
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        if #available(iOS 13.0, *) {
-            if self.traitCollection.userInterfaceStyle == .dark{
-                DataStorage.shared.SettingsValue.changeTheme(theme: .dark)
-            }
-            else{
-                DataStorage.shared.SettingsValue.changeTheme(theme: .white)
-            }
-        }
-        setTheme()
-    }
-    
+//    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+//        if #available(iOS 13.0, *) {
+//            if self.traitCollection.userInterfaceStyle == .dark{
+//                DataStorage.shared.SettingsValue.changeTheme(theme: .dark)
+//            }
+//            else{
+//                DataStorage.shared.SettingsValue.changeTheme(theme: .white)
+//            }
+//        }
+//        setTheme()
+//    }
+//
     ///Presents new view controller with new actions
     func presentOtherController(title: String, actions: [[CustomAction]]){
         
-        let backButtonAction = CustomAction(title: "Back", subtitle: nil, isSelected: false, imageName: "back", didClick: nil, style: .backStyle)
+        let backButtonAction = CustomAction(title: "Back", subtitle: nil, isSelected: false, imageName: "arrow.left", didClick: nil, style: .backStyle)
         
         var newActions = actions
         newActions.append([backButtonAction])
@@ -99,18 +99,18 @@ class CustomPicker: UIViewController{
         }
     }
     @objc func didCancel(sender: UIButton){
-        sender.backgroundColor = DataStorage.shared.SettingsValue.currentMode == .white ? UIColor.white : UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 1)
+        sender.backgroundColor = UIColor.white
         self.dismiss(animated: true, completion: nil)
     }
     @objc func touchDown(sender: UIButton){
-        sender.backgroundColor = DataStorage.shared.SettingsValue.currentMode == .white ? UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1) : UIColor(red: 55/255, green: 55/255, blue: 55/255, alpha: 1)
+        sender.backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1)
     }
     @objc func touchUpOut(sender: UIButton){
-        sender.backgroundColor = DataStorage.shared.SettingsValue.currentMode == .white ? UIColor.white : UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 1)
+        sender.backgroundColor = UIColor.white
     }
     func setTheme(){
         currentViewController?.setTheme()
-        let barTintColor = DataStorage.shared.SettingsValue.currentMode == .white ? UIColor.white :UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 1)
+        let barTintColor = UIColor.white
         
         if #available(iOS 15.0, *) {
             NavController?.navigationBar.standardAppearance.backgroundColor = barTintColor
@@ -122,8 +122,8 @@ class CustomPicker: UIViewController{
         
         self.mainView.changeTheme()
         
-        NavController?.navigationBar.titleTextAttributes = [.foregroundColor: DataStorage.shared.SettingsValue.currentMode == .white ? UIColor.black : UIColor.white]
-        NavController?.navigationBar.tintColor = DataStorage.shared.SettingsValue.currentMode == .white ? UIColor(red: 0, green: 122/255, blue: 1, alpha: 1) : UIColor.white
+        NavController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+        NavController?.navigationBar.tintColor = UIColor(red: 0, green: 122/255, blue: 1, alpha: 1)
         NavController?.addCustomBottomLine(color: currentViewController?.tableView?.separatorColor ?? UIColor.white)
         
     }

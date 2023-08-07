@@ -79,7 +79,7 @@ class AnimalCell: UICollectionViewCell{
     lazy var longGestureRecognizer: UILongPressGestureRecognizer = {
         let gesture = UILongPressGestureRecognizer(target: self, action: #selector(presentOptions))
         return gesture
-    }
+    }()
     
     func start(with: AnimalCellModel){
         self.animalCellModel = with
@@ -161,8 +161,42 @@ class AnimalCell: UICollectionViewCell{
     }
     
     ///Present options window
-    func presentOptions(){
+    @objc func presentOptions(){
+        var actions: [[CustomAction]] = [
+            [CustomAction(title: "Add to favorites", imageName: "star", didClick: {_,_ in
+                
+            })]
         
+        ]
+        
+        if self.animalCellModel?.animalInfo?.video == nil{
+            actions[0].append(CustomAction(title: "Share an audio", imageName: "square.and.arrow.up", didClick: { _, _ in
+                
+            }))
+        }
+        else{
+            actions[0].append(CustomAction(title: "Share", didClick: { [weak self] picker, _ in
+                var newActions: [CustomAction] = []
+                
+                newActions.append(CustomAction(title: "Share an audio", subtitle: nil, isSelected: false, didClick: { (_, _) in
+                    //self.Share(type: .audio)
+                }, style: .defaultStyle))
+                
+                newActions.append(CustomAction(title: "Share a video", subtitle: nil, isSelected: false, didClick: { (_, _) in
+                    //self.Share(type: .video)
+                }, style: .defaultStyle))
+                
+                picker.presentOtherController(title: "Share '\(self?.animalCellModel?.displayedName ?? "")'", actions: [newActions])
+            }, style: .transitionStyle))
+        }
+        
+        
+        let customPicker = CustomPicker(title: "", actions: actions, sourceFrame: self.superview?.convert(self.frame, to: self.animalCellModel?.viewController?.navigationController?.view))
+        customPicker.priorityWidth = 250
+
+        customPicker.modalPresentationStyle = .custom
+        customPicker.transitioningDelegate = Animator.shared
+        self.animalCellModel?.viewController?.present(customPicker, animated: true)
     }
     
     func enterPlayState(){

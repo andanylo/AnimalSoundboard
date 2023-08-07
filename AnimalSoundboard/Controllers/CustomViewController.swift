@@ -49,7 +49,7 @@ class CustomViewController: UIViewController{
         tableView?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         tableView?.delegate = self
         tableView?.dataSource = self
-        tableView?.separatorColor = DataStorage.shared.SettingsValue.currentMode == .white ? .lightGray : .black
+        tableView?.separatorColor = .lightGray//DataStorage.shared.SettingsValue.currentMode == .white ? .lightGray : .black
 
         if #available(iOS 15.0, *) {
             tableView?.sectionHeaderTopPadding = 0
@@ -57,7 +57,7 @@ class CustomViewController: UIViewController{
     }
    
     func setTheme(){
-        tableView?.separatorColor = DataStorage.shared.SettingsValue.currentMode == .white ? .lightGray : .black
+        tableView?.separatorColor = .lightGray//DataStorage.shared.SettingsValue.currentMode == .white ? .lightGray : .black
         tableView?.reloadData()
 
     }
@@ -98,7 +98,7 @@ extension CustomViewController: UITableViewDelegate, UITableViewDataSource{
             emptyView.backgroundColor = .clear
         }
         let view = UIView()
-        view.backgroundColor = DataStorage.shared.SettingsValue.currentMode == .dark ? .black : .lightGray
+        view.backgroundColor = .lightGray//DataStorage.shared.SettingsValue.currentMode == .dark ? .black : .lightGray
         view.alpha = 0.3
         view.frame.size.height = 8
         

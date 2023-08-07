@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 class Animator: NSObject, UIViewControllerAnimatedTransitioning{
+    static let shared = Animator()
+    
     var isPresenting = false
     func animationType(transitionContext: UIViewControllerContextTransitioning?) -> AnimationType{
         guard let viewController = isPresenting ? transitionContext?.viewController(forKey: .to) : transitionContext?.viewController(forKey: .from) else{

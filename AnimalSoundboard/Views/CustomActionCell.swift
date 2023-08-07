@@ -40,7 +40,7 @@ class CustomActionCell: UITableViewCell{
         titleLabel.text = customAction.title
         titleLabel.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         titleLabel.textAlignment = .left
-        titleLabel.textColor = customAction.style == .destructionStyle ? UIColor.red : (DataStorage.shared.SettingsValue.currentMode == .white ? UIColor.black : UIColor.white)
+        titleLabel.textColor = customAction.style == .destructionStyle ? UIColor.red : UIColor.black//(DataStorage.shared.SettingsValue.currentMode == .white ? UIColor.black : UIColor.white)
         titleLabel.lineBreakMode = .byWordWrapping
         titleLabel.numberOfLines = 0
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -51,8 +51,8 @@ class CustomActionCell: UITableViewCell{
             iconImageView = UIImageView()
             iconImageView?.translatesAutoresizingMaskIntoConstraints = false
             iconImageView?.contentMode = .scaleAspectFit
-            iconImageView?.image = UIImage(named: customAction.imageName!)?.withRenderingMode(.alwaysTemplate)
-            iconImageView?.tintColor = customAction.style == .destructionStyle ? .red : (DataStorage.shared.SettingsValue.currentMode == .dark ? UIColor.white : UIColor.black)
+            iconImageView?.image = UIImage(systemName: customAction.imageName!)?.withRenderingMode(.alwaysTemplate)
+            iconImageView?.tintColor = customAction.style == .destructionStyle ? .red : UIColor.black//(DataStorage.shared.SettingsValue.currentMode == .dark ? UIColor.white : UIColor.black)
             self.contentView.addSubview(iconImageView!)
             
             iconImageView?.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true
@@ -66,7 +66,7 @@ class CustomActionCell: UITableViewCell{
             checkmarkImageView?.translatesAutoresizingMaskIntoConstraints = false
             checkmarkImageView?.contentMode = .scaleAspectFit
             checkmarkImageView?.image = UIImage(named: "checkmark")?.withRenderingMode(.alwaysTemplate)
-            checkmarkImageView?.tintColor =  (DataStorage.shared.SettingsValue.currentMode == .dark ? UIColor.white : UIColor.black)
+            checkmarkImageView?.tintColor = .white //(DataStorage.shared.SettingsValue.currentMode == .dark ? UIColor.white : UIColor.black)
             self.contentView.addSubview(checkmarkImageView!)
             
             checkmarkImageView?.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 15).isActive = true
@@ -84,7 +84,7 @@ class CustomActionCell: UITableViewCell{
             subtitleLabel = UILabel()
             subtitleLabel.text = customAction.subtitle
             subtitleLabel.font = UIFont.systemFont(ofSize: 9, weight: .light)
-            subtitleLabel.textColor = DataStorage.shared.SettingsValue.currentMode == .white ? UIColor.black : UIColor.white
+            subtitleLabel.textColor = .black//DataStorage.shared.SettingsValue.currentMode == .white ? UIColor.black : UIColor.white
             subtitleLabel.lineBreakMode = .byWordWrapping
             subtitleLabel.numberOfLines = 0
             subtitleLabel.textAlignment = .left
