@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 class AnimalCell: UICollectionViewCell{
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -162,28 +163,41 @@ class AnimalCell: UICollectionViewCell{
     
     ///Present options window
     @objc func presentOptions(){
+        guard let animalCellModel = animalCellModel, let animalInfo = animalCellModel.animalInfo else{
+            return
+        }
         var actions: [[CustomAction]] = [
-            [CustomAction(title: "Add to favorites", imageName: "star", didClick: {_,_ in
-                
+            [CustomAction(title: !animalInfo.favorite ? "Add to favorites" : "Remove from favorites", imageName: !animalInfo.favorite ? "star" : "star.slash", didClick: { [weak self] _,_ in
+                if !animalInfo.favorite {
+                    animalCellModel.addToFavorites()
+                }
+                else{
+                    animalCellModel.removeFromFavorites()
+                }
+                DispatchQueue.main.async {
+                    let addedToFavorites = animalInfo.favorite
+                    animalCellModel.viewController?.collectionViewModel.manageFavorite(model: animalCellModel, isFavorited: addedToFavorites)
+                   // animalCellModel.viewController?.dataSource?.apply(<#T##snapshot: NSDiffableDataSourceSnapshot<ViewController.Section, AnimalCellModel>##NSDiffableDataSourceSnapshot<ViewController.Section, AnimalCellModel>#>)
+                }
             })]
         
         ]
         
         if self.animalCellModel?.animalInfo?.video == nil{
-            actions[0].append(CustomAction(title: "Share an audio", imageName: "square.and.arrow.up", didClick: { _, _ in
-                
+            actions[0].append(CustomAction(title: "Share an audio", imageName: "square.and.arrow.up", didClick: { [weak self] _, _ in
+                self?.Share(type: .audio)
             }))
         }
         else{
             actions[0].append(CustomAction(title: "Share", didClick: { [weak self] picker, _ in
                 var newActions: [CustomAction] = []
                 
-                newActions.append(CustomAction(title: "Share an audio", subtitle: nil, isSelected: false, didClick: { (_, _) in
-                    //self.Share(type: .audio)
+                newActions.append(CustomAction(title: "Share an audio", subtitle: nil, isSelected: false, imageName: "speaker.wave.3", didClick: { (_, _) in
+                    self?.Share(type: .audio)
                 }, style: .defaultStyle))
                 
-                newActions.append(CustomAction(title: "Share a video", subtitle: nil, isSelected: false, didClick: { (_, _) in
-                    //self.Share(type: .video)
+                newActions.append(CustomAction(title: "Share a video", subtitle: nil, isSelected: false, imageName: "play.rectangle", didClick: { (_, _) in
+                    self?.Share(type: .video)
                 }, style: .defaultStyle))
                 
                 picker.presentOtherController(title: "Share '\(self?.animalCellModel?.displayedName ?? "")'", actions: [newActions])
@@ -197,6 +211,25 @@ class AnimalCell: UICollectionViewCell{
         customPicker.modalPresentationStyle = .custom
         customPicker.transitioningDelegate = Animator.shared
         self.animalCellModel?.viewController?.present(customPicker, animated: true)
+    }
+    
+    
+    enum ShareType{
+        case video
+        case audio
+    }
+    
+    ///Share a sound and present an activity controller
+    func Share(type: ShareType){
+        guard let animalCellModel = self.animalCellModel else{
+            return
+        }
+        animalCellModel.share(type: type) { [weak self] urls in
+            guard let self = self else{
+                return
+            }
+            self.animalCellModel?.viewController?.presentActivityController(urls: urls, sender: self)
+        }
     }
     
     func enterPlayState(){

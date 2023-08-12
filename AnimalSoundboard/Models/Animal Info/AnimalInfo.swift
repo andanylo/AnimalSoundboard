@@ -22,16 +22,20 @@ class AnimalInfo{
     ///Name for a sound
     var name: String
     
+    ///Is favorite
+    var favorite: Bool
+    
     ///Sound manager to play a sound
     lazy var soundManager: SoundManager = {
         return SoundManager(animalInfo: self)
     }()
     
-    init(url: URL, image: URL? = nil, video: URL? = nil){
+    init(url: URL, image: URL? = nil, video: URL? = nil, favorite: Bool = false){
         self.url = url
         self.image = image
         self.name = url.lastPathComponent
         self.video = video
+        self.favorite = favorite
     }
     
     ///Init from filefetch
@@ -44,6 +48,12 @@ class AnimalInfo{
         if let videoPAth = fileFetch.videoPath{
             self.video = URL(filePath: videoPAth)
         }
+        if let favoriteArray = UserDefaults.standard.array(forKey: "Favorites") as? [String] {
+            self.favorite = favoriteArray.contains(name)
+        } else{
+            self.favorite = false
+        }
+        
     }
     
     

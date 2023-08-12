@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Photos
 
 class ViewController: UIViewController {
 
@@ -76,7 +77,7 @@ class ViewController: UIViewController {
         PlayerManager.shared.stopAllSounds(soundManager: nil)
     }
     
-    private var dataSource: UICollectionViewDiffableDataSource<Section, AnimalCellModel>?
+    var dataSource: UICollectionViewDiffableDataSource<Section, AnimalCellModel>?
     
     override func viewDidLayoutSubviews() {
         if heightConstraint?.constant != searchViewHeight{
@@ -109,7 +110,7 @@ class ViewController: UIViewController {
         collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         
         var snapshot = NSDiffableDataSourceSnapshot<Section, AnimalCellModel>()
-        snapshot.appendSections([.main])
+        snapshot.appendSections([.favorites, .main])
         snapshot.appendItems([])
         dataSource?.apply(snapshot, animatingDifferences: true)
         
@@ -165,6 +166,7 @@ class ViewController: UIViewController {
     }
     
     enum Section{
+        case favorites
         case main
     }
     
@@ -175,8 +177,13 @@ class ViewController: UIViewController {
     ///Creates new snapshot to update collection view
     func createSnapshot(cellModels: [AnimalCellModel]) -> NSDiffableDataSourceSnapshot<Section, AnimalCellModel>{
         var snapshot = NSDiffableDataSourceSnapshot<Section, AnimalCellModel>()
-        snapshot.appendSections([.main])
-        snapshot.appendItems(cellModels)
+        snapshot.appendSections([.favorites,.main])
+        let favoriteModels = cellModels.filter({$0.animalInfo?.favorite == true})
+        
+        snapshot.appendItems(favoriteModels, toSection: .favorites)
+        let mainModels = cellModels.filter({$0.animalInfo?.favorite == false})
+        snapshot.appendItems(mainModels, toSection: .main)
+        
         return snapshot
     }
     
@@ -219,6 +226,45 @@ class ViewController: UIViewController {
     }
     
     
+    
+    ///Presents activity controller
+    func presentActivityController(urls: [URL], sender: UIView){
+        DispatchQueue.main.async {
+            let activitiyvc = UIActivityViewController(activityItems: urls, applicationActivities: nil)
+            activitiyvc.completionWithItemsHandler = { (a,b,c,d) in
+                if b == true{
+                    do{
+                        for i in urls{
+                            try FileManager.default.removeItem(at: i)
+                        }
+                        let alert = UIAlertController(title: "Success", message: "You have successfully shared this sound.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                        DispatchQueue.main.async {
+                            self.present(alert, animated: true, completion: nil)
+                        }
+                    }
+                    catch{
+                        
+                    }
+                }
+                else if d != nil{
+                    
+                    if PHPhotoLibrary.authorizationStatus() != .authorized{
+                        let alert = UIAlertController(title: "Can't save video", message: "To save this video, you must allow photos access.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Open 'Settings'", style: .default, handler: {_ in
+                            UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)! , options: [:], completionHandler: nil)
+                        }))
+                        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                        DispatchQueue.main.async {
+                            self.present(alert, animated: true, completion: nil)
+                        }
+                    }
+                }
+            }
+            activitiyvc.popoverPresentationController?.sourceView = sender
+            self.present(activitiyvc, animated: true, completion: nil)
+        }
+    }
     
 
 

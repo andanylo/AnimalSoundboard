@@ -51,4 +51,42 @@ class CollectionViewModel{
             completion(animalCellModels)
         }
     }
+    
+    ///Manage favorite cell model
+    func manageFavorite(model: AnimalCellModel, isFavorited: Bool){
+        guard let dataSource = model.viewController?.dataSource, let cellModels = model.viewController?.collectionViewModel.displayedAnimalCellModels else{
+            return
+        }
+        
+        
+        
+        var snapshot = dataSource.snapshot()
+        
+        let favoritedModels = cellModels.filter({$0.animalInfo?.favorite == true})
+        let notFavoritedModels = cellModels.filter({$0.animalInfo?.favorite == false})
+        print(isFavorited)
+        if isFavorited{
+            
+            snapshot.deleteItems([model])
+            snapshot.appendItems([model], toSection: .favorites)
+            
+            let favoritedIndex = favoritedModels.firstIndex(of: model)
+            
+            if favoritedModels.count > 1 && favoritedIndex ?? 0 < favoritedModels.count - 1{
+                snapshot.moveItem(model, beforeItem: favoritedModels[(favoritedIndex ?? 0) + 1])
+            }
+        }
+        else{
+            snapshot.deleteItems([model])
+            snapshot.appendItems([model], toSection: .main)
+            
+            let notFavoritedIndex = notFavoritedModels.firstIndex(of: model)
+            print(notFavoritedModels.map({$0.displayedName}), notFavoritedIndex)
+            if  notFavoritedModels.count > 1 && notFavoritedIndex ?? 0 < notFavoritedModels.count - 1{
+                snapshot.moveItem(model, beforeItem: notFavoritedModels[(notFavoritedIndex ?? 0) + 1])
+            }
+        }
+        
+        dataSource.apply(snapshot, animatingDifferences: true)
+    }
 }
