@@ -10,6 +10,7 @@
 		1D0B91392A508BC2000F3CB8 /* SoundHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B91382A508BC2000F3CB8 /* SoundHandler.swift */; };
 		1D0B913B2A508F7D000F3CB8 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B913A2A508F7D000F3CB8 /* PlayerManager.swift */; };
 		1D0B913D2A5092B8000F3CB8 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B913C2A5092B8000F3CB8 /* Sound.swift */; };
+		1D6DB1162A870504004079D3 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6DB1152A870504004079D3 /* Header.swift */; };
 		1DC1130E2A60DEDD009BE2FF /* AnimatedImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1130D2A60DEDD009BE2FF /* AnimatedImageViewModel.swift */; };
 		1DC113102A60DF1B009BE2FF /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1130F2A60DF1B009BE2FF /* AnimatedImageView.swift */; };
 		1DC113122A60DF54009BE2FF /* VideoTimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC113112A60DF54009BE2FF /* VideoTimerModel.swift */; };
@@ -59,6 +60,7 @@
 		1D0B91382A508BC2000F3CB8 /* SoundHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundHandler.swift; sourceTree = "<group>"; };
 		1D0B913A2A508F7D000F3CB8 /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
 		1D0B913C2A5092B8000F3CB8 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		1D6DB1152A870504004079D3 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		1DC1130D2A60DEDD009BE2FF /* AnimatedImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedImageViewModel.swift; sourceTree = "<group>"; };
 		1DC1130F2A60DF1B009BE2FF /* AnimatedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedImageView.swift; sourceTree = "<group>"; };
 		1DC113112A60DF54009BE2FF /* VideoTimerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTimerModel.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				1DC1130F2A60DF1B009BE2FF /* AnimatedImageView.swift */,
 				1DE162A22A4B790500AE4CCD /* AnimalCell.swift */,
 				1DC113152A65C468009BE2FF /* SearchView.swift */,
+				1D6DB1152A870504004079D3 /* Header.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				1DC1131E2A688D21009BE2FF /* CustomPicker.swift in Sources */,
 				1DC1130E2A60DEDD009BE2FF /* AnimatedImageViewModel.swift in Sources */,
 				1DC113162A65C468009BE2FF /* SearchView.swift in Sources */,
+				1D6DB1162A870504004079D3 /* Header.swift in Sources */,
 				1DC113122A60DF54009BE2FF /* VideoTimerModel.swift in Sources */,
 				1DFA3F652A39D886000661AF /* SceneDelegate.swift in Sources */,
 				1DE162972A4760B100AE4CCD /* SoundManager.swift in Sources */,

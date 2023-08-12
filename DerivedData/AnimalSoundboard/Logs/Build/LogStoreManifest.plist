@@ -40,6 +40,40 @@
 			<key>uniqueIdentifier</key>
 			<string>0B318FC6-774F-4399-92D2-3929F7A63D9D</string>
 		</dict>
+		<key>0BE5AD2A-6EFC-4CFD-851E-61C504234C21</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>0BE5AD2A-6EFC-4CFD-851E-61C504234C21.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AnimalSoundboard project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AnimalSoundboard</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build AnimalSoundboard</string>
+			<key>timeStartedRecording</key>
+			<real>713492115.642838</real>
+			<key>timeStoppedRecording</key>
+			<real>713492118.20495105</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>0BE5AD2A-6EFC-4CFD-851E-61C504234C21</string>
+		</dict>
 		<key>13581C99-5BD9-486E-B660-079E404B8021</key>
 		<dict>
 			<key>className</key>
@@ -73,6 +107,40 @@
 			<string>Build AnimalSoundboard</string>
 			<key>uniqueIdentifier</key>
 			<string>13581C99-5BD9-486E-B660-079E404B8021</string>
+		</dict>
+		<key>191FB3B0-A285-4986-B56F-28DA03A66879</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>191FB3B0-A285-4986-B56F-28DA03A66879.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AnimalSoundboard project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AnimalSoundboard</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build AnimalSoundboard</string>
+			<key>timeStartedRecording</key>
+			<real>713492401.81065202</real>
+			<key>timeStoppedRecording</key>
+			<real>713492403.183972</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>191FB3B0-A285-4986-B56F-28DA03A66879</string>
 		</dict>
 		<key>2273A3F1-16FB-4B83-B3BA-1A2052842CC8</key>
 		<dict>
@@ -516,6 +584,40 @@
 			<key>uniqueIdentifier</key>
 			<string>44E3BDC7-0300-4312-A7D9-DDDF090DC90B</string>
 		</dict>
+		<key>51D30D55-E1FE-4753-9937-BC3A714FF0DB</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>51D30D55-E1FE-4753-9937-BC3A714FF0DB.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AnimalSoundboard project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AnimalSoundboard</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build AnimalSoundboard</string>
+			<key>timeStartedRecording</key>
+			<real>713493017.16276097</real>
+			<key>timeStoppedRecording</key>
+			<real>713493018.40722096</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>51D30D55-E1FE-4753-9937-BC3A714FF0DB</string>
+		</dict>
 		<key>55016BDC-0323-4DC1-85F3-7C699A269505</key>
 		<dict>
 			<key>className</key>
@@ -651,6 +753,40 @@
 			<string>Build AnimalSoundboard</string>
 			<key>uniqueIdentifier</key>
 			<string>6029489D-0FB9-4413-9EA3-E6FA86835B91</string>
+		</dict>
+		<key>7ECB9384-8DBC-4463-B750-4C0B971322E8</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7ECB9384-8DBC-4463-B750-4C0B971322E8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AnimalSoundboard project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AnimalSoundboard</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build AnimalSoundboard</string>
+			<key>timeStartedRecording</key>
+			<real>713493119.33692598</real>
+			<key>timeStoppedRecording</key>
+			<real>713493120.43589604</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>7ECB9384-8DBC-4463-B750-4C0B971322E8</string>
 		</dict>
 		<key>7EF7D760-CC6F-46C7-AAD4-CCF66061D078</key>
 		<dict>
@@ -1094,6 +1230,40 @@
 			<key>uniqueIdentifier</key>
 			<string>C3586012-1369-478B-9991-142E050DBBEF</string>
 		</dict>
+		<key>C6A5CBDB-79FF-458C-8ADD-5240A0305C55</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C6A5CBDB-79FF-458C-8ADD-5240A0305C55.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AnimalSoundboard project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AnimalSoundboard</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build AnimalSoundboard</string>
+			<key>timeStartedRecording</key>
+			<real>713493055.15556395</real>
+			<key>timeStoppedRecording</key>
+			<real>713493056.10556304</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>C6A5CBDB-79FF-458C-8ADD-5240A0305C55</string>
+		</dict>
 		<key>CEBE1B1F-C123-44E7-BB04-760609B39DB6</key>
 		<dict>
 			<key>className</key>
@@ -1196,6 +1366,40 @@
 			<key>uniqueIdentifier</key>
 			<string>D651A0F3-2A74-4F91-AEF1-29F59B0379E4</string>
 		</dict>
+		<key>DB60AF02-8F01-4104-BE9C-D9FCA8B56770</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>DB60AF02-8F01-4104-BE9C-D9FCA8B56770.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AnimalSoundboard project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AnimalSoundboard</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build AnimalSoundboard</string>
+			<key>timeStartedRecording</key>
+			<real>713493133.07296705</real>
+			<key>timeStoppedRecording</key>
+			<real>713493134.383232</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>DB60AF02-8F01-4104-BE9C-D9FCA8B56770</string>
+		</dict>
 		<key>E35A9214-0F61-4A35-9BF4-66101FF189C9</key>
 		<dict>
 			<key>className</key>
@@ -1229,6 +1433,40 @@
 			<string>Build AnimalSoundboard</string>
 			<key>uniqueIdentifier</key>
 			<string>E35A9214-0F61-4A35-9BF4-66101FF189C9</string>
+		</dict>
+		<key>EBC2546E-CE7A-47C1-BAE7-C38E1248A6DF</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>EBC2546E-CE7A-47C1-BAE7-C38E1248A6DF.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AnimalSoundboard project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AnimalSoundboard</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build AnimalSoundboard</string>
+			<key>timeStartedRecording</key>
+			<real>713493101.80563605</real>
+			<key>timeStoppedRecording</key>
+			<real>713493101.93293202</real>
+			<key>title</key>
+			<string>Build AnimalSoundboard</string>
+			<key>uniqueIdentifier</key>
+			<string>EBC2546E-CE7A-47C1-BAE7-C38E1248A6DF</string>
 		</dict>
 		<key>FB1C8101-03C7-4B0E-A982-A375E9B40B2C</key>
 		<dict>

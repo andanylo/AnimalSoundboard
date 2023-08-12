@@ -64,7 +64,7 @@ class CollectionViewModel{
         
         let favoritedModels = cellModels.filter({$0.animalInfo?.favorite == true})
         let notFavoritedModels = cellModels.filter({$0.animalInfo?.favorite == false})
-        print(isFavorited)
+
         if isFavorited{
             
             snapshot.deleteItems([model])
@@ -81,7 +81,6 @@ class CollectionViewModel{
             snapshot.appendItems([model], toSection: .main)
             
             let notFavoritedIndex = notFavoritedModels.firstIndex(of: model)
-            print(notFavoritedModels.map({$0.displayedName}), notFavoritedIndex)
             if  notFavoritedModels.count > 1 && notFavoritedIndex ?? 0 < notFavoritedModels.count - 1{
                 snapshot.moveItem(model, beforeItem: notFavoritedModels[(notFavoritedIndex ?? 0) + 1])
             }

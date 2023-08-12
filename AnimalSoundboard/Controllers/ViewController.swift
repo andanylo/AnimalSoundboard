@@ -23,9 +23,11 @@ class ViewController: UIViewController {
         collectionViewLayout.itemSize = collectionViewModel.itemSize
         collectionViewLayout.minimumLineSpacing = 5
         collectionViewLayout.minimumInteritemSpacing = 5
+        collectionViewLayout.headerReferenceSize = CGSize(width: self.view.frame.width, height: 30)
         
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: collectionViewLayout)
         collectionView.register(AnimalCell.self, forCellWithReuseIdentifier: CollectionViewIdentifiers.cell.rawValue)
+        collectionView.register(Header.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CollectionViewIdentifiers.header.rawValue)
         collectionView.dataSource = dataSource
         collectionView.delegate = self
         
@@ -103,6 +105,14 @@ class ViewController: UIViewController {
             return cell
         })
         
+        self.dataSource?.supplementaryViewProvider = { collectionView, type, indexPath in
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CollectionViewIdentifiers.header.rawValue, for: indexPath) as? Header else{
+                return Header(frame: CGRect.zero)
+            }
+            header.start(section: indexPath.section == 0 ? .favorites : .main)
+            return header
+        }
+        
         self.view.addSubview(collectionView)
         collectionView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
@@ -172,6 +182,7 @@ class ViewController: UIViewController {
     
     enum CollectionViewIdentifiers: String{
         case cell = "Cell"
+        case header = "Header"
     }
     
     ///Creates new snapshot to update collection view
