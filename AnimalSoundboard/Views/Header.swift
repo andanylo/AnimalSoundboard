@@ -17,15 +17,26 @@ class Header: UICollectionReusableView{
     lazy var label: UILabel = {
         let lab = UILabel()
         lab.translatesAutoresizingMaskIntoConstraints = false
-        lab.textColor = .black
+        lab.textColor = .darkGray
         lab.font = UIFont.systemFont(ofSize: 18, weight: .regular)
         return lab
+    }()
+    
+    lazy var icon: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.tintColor = .darkGray
+        imageView.contentMode = .scaleAspectFit
+        imageView.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        return imageView
     }()
     
     override func prepareForReuse() {
         super.prepareForReuse()
         
         label.removeFromSuperview()
+        icon.removeFromSuperview()
     }
     
     func start(section: ViewController.Section){
@@ -38,7 +49,17 @@ class Header: UICollectionReusableView{
             label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         }
         
-        label.text = section == .favorites ? "Favorites" : "Library"
+        label.text = section == .favorites ? "Favorites" : "Animal library"
+        
+        
+        if icon.superview == nil{
+            self.addSubview(icon)
+            
+            icon.leadingAnchor.constraint(equalTo: label.trailingAnchor, constant: 5).isActive = true
+            icon.centerYAnchor.constraint(equalTo: label.centerYAnchor).isActive = true
+        }
+        
+        icon.image = UIImage(systemName: section == .favorites ? "star" : "books.vertical")
         
     }
     

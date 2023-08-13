@@ -17,14 +17,12 @@ class SoundManager{
     
     ///Clear sound and call finish handler
     func clearRemovedSound(sound: Sound, forced: Bool){
-        guard sound.player.url != nil else{
-            return
-        }
         
         ///Call handler and clear
         if sound === lastPlayingSound{
             soundHander?.didStopPlaying(soundManager: self, forced: forced)
             lastPlayingSound = nil
+            
         }
     }
     

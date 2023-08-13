@@ -11,6 +11,7 @@
 		1D0B913B2A508F7D000F3CB8 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B913A2A508F7D000F3CB8 /* PlayerManager.swift */; };
 		1D0B913D2A5092B8000F3CB8 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B913C2A5092B8000F3CB8 /* Sound.swift */; };
 		1D6DB1162A870504004079D3 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6DB1152A870504004079D3 /* Header.swift */; };
+		1D6DB1182A898EF0004079D3 /* font in Resources */ = {isa = PBXBuildFile; fileRef = 1D6DB1172A898EF0004079D3 /* font */; };
 		1DC1130E2A60DEDD009BE2FF /* AnimatedImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1130D2A60DEDD009BE2FF /* AnimatedImageViewModel.swift */; };
 		1DC113102A60DF1B009BE2FF /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1130F2A60DF1B009BE2FF /* AnimatedImageView.swift */; };
 		1DC113122A60DF54009BE2FF /* VideoTimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC113112A60DF54009BE2FF /* VideoTimerModel.swift */; };
@@ -61,6 +62,7 @@
 		1D0B913A2A508F7D000F3CB8 /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
 		1D0B913C2A5092B8000F3CB8 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		1D6DB1152A870504004079D3 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		1D6DB1172A898EF0004079D3 /* font */ = {isa = PBXFileReference; lastKnownFileType = folder; path = font; sourceTree = "<group>"; };
 		1DC1130D2A60DEDD009BE2FF /* AnimatedImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedImageViewModel.swift; sourceTree = "<group>"; };
 		1DC1130F2A60DF1B009BE2FF /* AnimatedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedImageView.swift; sourceTree = "<group>"; };
 		1DC113112A60DF54009BE2FF /* VideoTimerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTimerModel.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 		1DFA3F612A39D886000661AF /* AnimalSoundboard */ = {
 			isa = PBXGroup;
 			children = (
+				1D6DB1172A898EF0004079D3 /* font */,
 				1DE162912A475FC100AE4CCD /* Controllers */,
 				1DE162902A475FBC00AE4CCD /* Views */,
 				1DE1628F2A475FB600AE4CCD /* Models */,
@@ -353,6 +356,7 @@
 				1DE1629D2A477F7F00AE4CCD /* Files in Resources */,
 				1DFA3F6F2A39D887000661AF /* LaunchScreen.storyboard in Resources */,
 				1DFA3F6C2A39D887000661AF /* Assets.xcassets in Resources */,
+				1D6DB1182A898EF0004079D3 /* font in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

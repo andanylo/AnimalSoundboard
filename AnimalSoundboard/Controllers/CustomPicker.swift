@@ -91,8 +91,9 @@ class CustomPicker: UIViewController{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for i in touches{
             let location = i.location(in: self.view)
+            
             if let viewTouch = self.view.hitTest(location, with: nil){
-                if viewTouch.restorationIdentifier == "background"{
+                if viewTouch.restorationIdentifier == "background" || viewTouch === stickView{
                     self.dismiss(animated: true, completion: nil)
                 }
             }

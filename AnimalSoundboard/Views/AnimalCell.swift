@@ -82,6 +82,14 @@ class AnimalCell: UICollectionViewCell{
         return gesture
     }()
     
+    
+    private let strokeTextAttributes = [
+        NSAttributedString.Key.strokeColor : UIColor.black,
+        NSAttributedString.Key.foregroundColor : UIColor.white,
+        NSAttributedString.Key.strokeWidth : -2.5,
+        NSAttributedString.Key.font : UIFont(name: "Impact", size: 17)
+            ] as [NSAttributedString.Key : Any]
+    
     func start(with: AnimalCellModel){
         self.animalCellModel = with
         
@@ -145,7 +153,7 @@ class AnimalCell: UICollectionViewCell{
             nameLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -5).isActive = true
         }
         
-        nameLabel.text = animalCellModel?.displayedName
+        nameLabel.attributedText = NSAttributedString(string: animalCellModel?.displayedName ?? "", attributes: strokeTextAttributes)//animalCellModel?.displayedName
         nameLabel.sizeToFit()
         
         
@@ -154,6 +162,8 @@ class AnimalCell: UICollectionViewCell{
         if animalCellModel?.animalInfo?.soundManager.hasPlayingSounds() == true{
             self.animate()
             self.enterPlayState()
+            
+            
         }
         
         self.contentView.addGestureRecognizer(longGestureRecognizer)
@@ -302,6 +312,7 @@ class AnimalCell: UICollectionViewCell{
     ///Did start playing
     func didStartPlaying(){
         animatedImageView?.loadGif()
+        print(animatedImageView?.model)
     }
     
     ///Did stop playing

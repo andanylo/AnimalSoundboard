@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         collectionView.dataSource = dataSource
         collectionView.delegate = self
         
-        collectionView.contentInset = UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 5)
+        collectionView.contentInset = UIEdgeInsets(top: 10, left: 5, bottom: 60, right: 5)
         collectionView.bounces = true
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
@@ -56,6 +56,8 @@ class ViewController: UIViewController {
         
         return button
     }()
+    
+    var stopButtonBottomConstraint: NSLayoutConstraint!
     
     
     ///Search view on top
@@ -132,17 +134,17 @@ class ViewController: UIViewController {
                 return
             }
             DispatchQueue.main.async {
-                self?.dataSource?.apply(snapshot, animatingDifferences: true)
+                self?.dataSource?.apply(snapshot, animatingDifferences: false)
             }
         }
         
         
         self.view.addSubview(stopAllButton)
         
-        stopAllButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -5).isActive = true
+        stopButtonBottomConstraint = stopAllButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -5)
+        stopButtonBottomConstraint.isActive = true
         stopAllButton.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 15).isActive = true
         stopAllButton.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -15).isActive = true
-        
         
         ///Search view on top
         self.view.addSubview(searchView)
@@ -197,7 +199,18 @@ class ViewController: UIViewController {
         
         return snapshot
     }
+    var isHidden = false
     
+    ///Animate stop button bottom constraint
+    func animateStopButtonBottomConstraint(hide: Bool){
+        if isHidden != hide{
+            isHidden = hide
+            stopButtonBottomConstraint.constant = hide ? 150 : -5
+            UIView.animate(withDuration: 0.3) {
+                self.view.layoutIfNeeded()
+            }
+        }
+    }
     
     private var lastScroll: CGFloat = 0
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -206,9 +219,13 @@ class ViewController: UIViewController {
         
         ///Show the search bar if scrolled past the top
         ///
-        guard scrollView.isDragging else{
-            lastScroll = contentOffset
-            return
+//        guard scrollView.isDragging else{
+//            lastScroll = contentOffset
+//            return
+//        }
+        if scrollView.isDragging{
+            self.animateStopButtonBottomConstraint(hide: true)
+            
         }
         
         let delta = contentOffset - lastScroll
@@ -219,24 +236,38 @@ class ViewController: UIViewController {
         ///CONST >= (-HEIGHT) - hide
         ///CONST <= 0 - show
         //show search bar
+       
+        
+        
         if topConstraint.constant != searchTopConstraint && scrollView.contentOffset.y + scrollView.frame.height < scrollView.contentSize.height && searchView.searchBar.text?.isEmpty != false{
             if delta < 0{
                 topConstraint.constant = searchTopConstraint
+                
                 //collectionView.contentInset.top = searchView.frame.height - self.view.safeAreaInsets.top + topConstraint.constant
             }
             else{
                 if scrollView.contentOffset.y >= -searchView.frame.height {
                     topConstraint.constant = searchTopConstraint
+                    searchView.searchBar.resignFirstResponder()
                     //collectionView.contentInset.top = searchView.frame.height - self.view.safeAreaInsets.top + topConstraint.constant
                 }
             }
 
             self.view.layoutIfNeeded()
         }
+        
         lastScroll = contentOffset
     }
-    
-    
+
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        self.animateStopButtonBottomConstraint(hide: false)
+    }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        self.animateStopButtonBottomConstraint(hide: false)
+    }
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        self.animateStopButtonBottomConstraint(hide: false)
+    }
     
     ///Presents activity controller
     func presentActivityController(urls: [URL], sender: UIView){
