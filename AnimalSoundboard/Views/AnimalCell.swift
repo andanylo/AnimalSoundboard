@@ -159,6 +159,7 @@ class AnimalCell: UICollectionViewCell{
         
         self.contentView.addGestureRecognizer(tapGestureRecognizer)
         
+       
         if animalCellModel?.animalInfo?.soundManager.hasPlayingSounds() == true{
             self.animate()
             self.enterPlayState()
@@ -312,7 +313,6 @@ class AnimalCell: UICollectionViewCell{
     ///Did start playing
     func didStartPlaying(){
         animatedImageView?.loadGif()
-        print(animatedImageView?.model)
     }
     
     ///Did stop playing
