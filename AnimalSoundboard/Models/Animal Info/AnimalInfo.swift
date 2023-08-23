@@ -25,17 +25,21 @@ class AnimalInfo{
     ///Is favorite
     var favorite: Bool
     
+    ///Info about sound fetched from json
+    var info: InfoJSON?
+    
     ///Sound manager to play a sound
     lazy var soundManager: SoundManager = {
         return SoundManager(animalInfo: self)
     }()
     
-    init(url: URL, image: URL? = nil, video: URL? = nil, favorite: Bool = false){
+    init(url: URL, image: URL? = nil, video: URL? = nil, favorite: Bool = false, infoJSON: InfoJSON?){
         self.url = url
         self.image = image
         self.name = url.lastPathComponent
         self.video = video
         self.favorite = favorite
+        self.info = infoJSON
     }
     
     ///Init from filefetch
@@ -53,6 +57,8 @@ class AnimalInfo{
         } else{
             self.favorite = false
         }
+        
+        self.info = fileFetch.infoJSON
         
     }
     

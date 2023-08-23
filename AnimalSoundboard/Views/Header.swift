@@ -49,7 +49,25 @@ class Header: UICollectionReusableView{
             label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         }
         
-        label.text = section == .favorites ? "Favorites" : "Animal library"
+        var sectionLabel: String = "Animal library"
+        switch section{
+        case .main:
+            sectionLabel = "Animal library"
+        case .wild:
+            sectionLabel = "Wild"
+        case .farm:
+            sectionLabel = "Farm"
+        case .birds:
+            sectionLabel = "Birds"
+        case .dogs:
+            sectionLabel = "Dogs"
+        case .cats:
+            sectionLabel = "Cats"
+        default:
+            break
+        }
+        
+        label.text = section == .favorites ? "Favorites" : sectionLabel
         
         
         if icon.superview == nil{

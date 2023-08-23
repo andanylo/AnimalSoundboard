@@ -38,7 +38,7 @@ class AnimalCellModel: Hashable{
             return animalInfo?.name ?? ""
         }
     }
-    
+    var originalSection: ViewController.Section = .main
     
     var previewImage: UIImage?
     
@@ -51,6 +51,7 @@ class AnimalCellModel: Hashable{
     init(animalInfo: AnimalInfo){
         self.identifier = animalInfo.url.path
         self.animalInfo = animalInfo
+        self.originalSection = ViewController.Section(rawValue: animalInfo.info?.group_id ?? "main") ?? .main
        
     }
     

@@ -93,11 +93,11 @@ class AnimatedImageView: UIImageView{
 //        }
 //    }
     
-    //Start gif
-    func loadGif() {
+    //Start video
+    func loadVideo() {
         self.stopAnimating()
 
-        //if animating gif set image on calculated frame number
+        //if animating video set image on calculated frame number
         if model?.animalInfo?.soundManager.lastPlayingSound?.player.currentTime ?? 0 > 0{
             guard let model = self.model else{
                 return

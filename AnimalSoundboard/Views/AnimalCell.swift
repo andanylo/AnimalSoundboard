@@ -21,7 +21,7 @@ class AnimalCell: UICollectionViewCell{
         self.animatedImageView?.image = nil
         self.animatedImageView?.DeInitialization()
         
-        self.animatedImageView?.model?.animatedImageView = nil
+        //self.animatedImageView?.model?.animatedImageView = nil
         self.animatedImageView?.model = nil
         
         self.animatedImageView?.removeFromSuperview()
@@ -129,9 +129,7 @@ class AnimalCell: UICollectionViewCell{
                     animatedImageView?.contentMode = .scaleAspectFit
                     animatedImageView?.translatesAutoresizingMaskIntoConstraints = false
                 }
-                else{
-                    animatedImageView?.model = model
-                }
+                
                 
                 self.contentView.addSubview(animatedImageView!)
                 animatedImageView?.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
@@ -139,7 +137,14 @@ class AnimalCell: UICollectionViewCell{
                 animatedImageView?.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor).isActive = true
                 animatedImageView?.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor).isActive = true
             }
+            
+            if animatedImageView?.model == nil{
+                animatedImageView?.model = model
+            }
+            
+            
         }
+     
         
         ///Set label
         if nameLabel.superview == nil{
@@ -247,7 +252,7 @@ class AnimalCell: UICollectionViewCell{
         DispatchQueue.main.async {
             self.stopButtonStatus(hide: false)
             self.nameLabel.isHidden = self.animatedImageView?.model != nil
-            self.animatedImageView?.loadGif()
+            self.animatedImageView?.loadVideo()
         }
     }
     
@@ -312,7 +317,8 @@ class AnimalCell: UICollectionViewCell{
     
     ///Did start playing
     func didStartPlaying(){
-        animatedImageView?.loadGif()
+        print(animatedImageView?.model, animatedImageView?.model?.animatedImageView)
+        animatedImageView?.loadVideo()
     }
     
     ///Did stop playing

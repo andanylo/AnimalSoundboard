@@ -16,7 +16,9 @@ class FilesFetcher{
         var filePath: String
         var imagePath: String?
         var videoPath: String?
+        var infoJSON: InfoJSON?
     }
+
     
     
     ///Returns the file fetch objects from a 'Files' folder
@@ -55,9 +57,20 @@ class FilesFetcher{
                 })
                 let videoPath = videoFile == nil ? nil : folderPath + "/" + videoFile!
                 
+                let infoJSON = contents.first {
+                    
+                    return $0 == "info.json"
+                }
+                
+                var infoJSONobj: InfoJSON?
+                if let jsonPath = infoJSON == nil ? nil : folderPath + "/" + infoJSON!,
+                   let data = try? Data(contentsOf:  URL(filePath: jsonPath)){
+                    infoJSONobj = try? JSONDecoder().decode(InfoJSON.self, from: data)
+                }
+                
                 
                 //Create object
-                let fileFetch = FileFetch(name: folder, filePath: folderPath + "/" + soundFile, imagePath: imagePath, videoPath: videoPath)
+                let fileFetch = FileFetch(name: folder, filePath: folderPath + "/" + soundFile, imagePath: imagePath, videoPath: videoPath, infoJSON: infoJSONobj)
                 result.append(fileFetch)
             }
             completion(result)

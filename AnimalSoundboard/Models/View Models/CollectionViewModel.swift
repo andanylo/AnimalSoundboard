@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 ///Collection view model that manipulates collection view status
 class CollectionViewModel{
@@ -39,6 +40,23 @@ class CollectionViewModel{
     }
     
     
+    func createSnapshot(cellModels: [AnimalCellModel]) -> NSDiffableDataSourceSnapshot<ViewController.Section, AnimalCellModel>{
+        var snapshot = NSDiffableDataSourceSnapshot<ViewController.Section, AnimalCellModel>()
+        snapshot.appendSections([.favorites, .main, .wild, .farm, .birds, .cats, .dogs])
+        let favoriteModels = cellModels.filter({$0.animalInfo?.favorite == true})
+        snapshot.appendItems(favoriteModels, toSection: .favorites)
+        
+        let sections: [ViewController.Section] = [.main, .wild, .farm, .birds, .cats, .dogs]
+        for section in sections{
+            let sectionModels = cellModels.filter({($0.animalInfo?.info?.group_id == section.rawValue || (section == .main && $0.animalInfo?.info == nil)) && $0.animalInfo?.favorite == false})
+            snapshot.appendItems(sectionModels, toSection: section)
+        }
+        
+        return snapshot
+        
+        
+    }
+    
     ///Fetches files from main bundle and creates cell models from that
     func fetchAndCreateAnimalCellModels(completion: @escaping([AnimalCellModel]) -> Void){
         FilesFetcher.fetchFiles { [weak self] files in
@@ -63,7 +81,7 @@ class CollectionViewModel{
         var snapshot = dataSource.snapshot()
         
         let favoritedModels = cellModels.filter({$0.animalInfo?.favorite == true})
-        let notFavoritedModels = cellModels.filter({$0.animalInfo?.favorite == false})
+        let sectionModels = cellModels.filter({$0.originalSection == model.originalSection})
 
         if isFavorited{
             
@@ -78,11 +96,11 @@ class CollectionViewModel{
         }
         else{
             snapshot.deleteItems([model])
-            snapshot.appendItems([model], toSection: .main)
+            snapshot.appendItems([model], toSection: model.originalSection)
             
-            let notFavoritedIndex = notFavoritedModels.firstIndex(of: model)
-            if  notFavoritedModels.count > 1 && notFavoritedIndex ?? 0 < notFavoritedModels.count - 1{
-                snapshot.moveItem(model, beforeItem: notFavoritedModels[(notFavoritedIndex ?? 0) + 1])
+            let sectionIndex = sectionModels.firstIndex(of: model)
+            if sectionModels.count > 1 && sectionIndex ?? 0 < sectionModels.count - 1{
+                snapshot.moveItem(model, beforeItem: sectionModels[(sectionIndex ?? 0) + 1])
             }
         }
         

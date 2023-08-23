@@ -21,7 +21,7 @@ class AnimatedImageViewModel{
     //Weak reference to a Block Sound object
     weak var animalInfo: AnimalInfo?
     //Weak reference of animated image view
-    weak var animatedImageView: AnimatedImageView?
+    var animatedImageView: AnimatedImageView?
     
     //Did change frame handler
     var didChangeFrame: ((Int) -> Void)?
@@ -41,21 +41,6 @@ class AnimatedImageViewModel{
     
     var animatedFilePath: String = String()
     
-    
-    
-    //Preview image
-//    var previewImage: UIImage?{
-//        get{
-//            var image = ImageCache.shared.getImage(imagePath: imagePath)
-//            if image == nil{
-//                image = UIImage(contentsOfFile: imagePath)
-//                if image != nil{
-//                    ImageCache.shared.setImage(imagePath: imagePath, image: image!)
-//                }
-//            }
-//            return image
-//        }
-//    }
     
     //Set path of animated file
     init(animatedFilePath: String, animalInfo: AnimalInfo){
@@ -83,7 +68,6 @@ class AnimatedImageViewModel{
         dispatchQueue.async {
             
             self.returnCurrentFrame { [weak self] frame in
-              
                 self?.getNumberOfFrames(completion: { [weak self] numberOfFrames in
                     
                     guard numberOfFrames > 1, frame >= 0 else {
@@ -115,7 +99,6 @@ class AnimatedImageViewModel{
     ///Bind with image view and set did change frame handler
     func bindWithImageView(imageView: AnimatedImageView){
         self.animatedImageView = imageView
-        
         //Did change current frame number; set image
         self.didChangeFrame = { [weak self] currentFrame in
             

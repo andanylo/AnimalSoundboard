@@ -111,7 +111,9 @@ class ViewController: UIViewController {
             guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CollectionViewIdentifiers.header.rawValue, for: indexPath) as? Header else{
                 return Header(frame: CGRect.zero)
             }
-            header.start(section: indexPath.section == 0 ? .favorites : .main)
+            let sections: [Section] = [.favorites, .main, .wild, .farm, .birds, .cats, .dogs]
+            
+            header.start(section: sections[indexPath.section])
             return header
         }
         
@@ -130,7 +132,7 @@ class ViewController: UIViewController {
             for cellModel in cellModels {
                 cellModel.viewController = self
             }
-            guard let snapshot = self?.createSnapshot(cellModels: cellModels) else{
+            guard let snapshot = self?.collectionViewModel.createSnapshot(cellModels: cellModels) else{
                 return
             }
             DispatchQueue.main.async {
@@ -167,7 +169,7 @@ class ViewController: UIViewController {
         ///On search text change
         searchView.textDidChange = { [weak self] searchText in
             self?.collectionViewModel.displayedFilterName = searchText
-            guard let snapshot = self?.createSnapshot(cellModels: self?.collectionViewModel.displayedAnimalCellModels ?? []) else{
+            guard let snapshot = self?.collectionViewModel.createSnapshot(cellModels: self?.collectionViewModel.displayedAnimalCellModels ?? []) else{
                 return
             }
             DispatchQueue.main.async {
@@ -177,9 +179,14 @@ class ViewController: UIViewController {
         
     }
     
-    enum Section{
-        case favorites
-        case main
+    enum Section: String{
+        case favorites = "favorites"
+        case main = "main"
+        case wild = "wild"
+        case farm = "farm"
+        case birds = "birds"
+        case cats = "cats"
+        case dogs = "dogs"
     }
     
     enum CollectionViewIdentifiers: String{
@@ -187,18 +194,6 @@ class ViewController: UIViewController {
         case header = "Header"
     }
     
-    ///Creates new snapshot to update collection view
-    func createSnapshot(cellModels: [AnimalCellModel]) -> NSDiffableDataSourceSnapshot<Section, AnimalCellModel>{
-        var snapshot = NSDiffableDataSourceSnapshot<Section, AnimalCellModel>()
-        snapshot.appendSections([.favorites,.main])
-        let favoriteModels = cellModels.filter({$0.animalInfo?.favorite == true})
-        
-        snapshot.appendItems(favoriteModels, toSection: .favorites)
-        let mainModels = cellModels.filter({$0.animalInfo?.favorite == false})
-        snapshot.appendItems(mainModels, toSection: .main)
-        
-        return snapshot
-    }
     var isHidden = false
     
     ///Animate stop button bottom constraint
