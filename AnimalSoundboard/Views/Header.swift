@@ -37,6 +37,7 @@ class Header: UICollectionReusableView{
         
         label.removeFromSuperview()
         icon.removeFromSuperview()
+        icon.image = nil
     }
     
     func start(section: ViewController.Section){
@@ -63,6 +64,8 @@ class Header: UICollectionReusableView{
             sectionLabel = "Dogs"
         case .cats:
             sectionLabel = "Cats"
+        case .insects:
+            sectionLabel = "Insects"
         default:
             break
         }
@@ -76,8 +79,9 @@ class Header: UICollectionReusableView{
             icon.leadingAnchor.constraint(equalTo: label.trailingAnchor, constant: 5).isActive = true
             icon.centerYAnchor.constraint(equalTo: label.centerYAnchor).isActive = true
         }
-        
-        icon.image = UIImage(systemName: section == .favorites ? "star" : "books.vertical")
+        if section == .favorites || section == .main{
+            icon.image = UIImage(systemName: section == .favorites ? "star" : "books.vertical")
+        }
         
     }
     

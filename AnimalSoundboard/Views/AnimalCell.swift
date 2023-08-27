@@ -12,22 +12,29 @@ class AnimalCell: UICollectionViewCell{
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        self.animalCellModel = nil
-        self.nameLabel.removeFromSuperview()
-        
-        self.previewImageView.removeFromSuperview()
+ 
+//        self.nameLabel.removeFromSuperview()
+//
+//        self.previewImageView.removeFromSuperview()
+        self.previewImageView.image = nil
         self.stopButton.removeFromSuperview()
-        
+//
+        if animalCellModel?.animatedImageViewModel != nil {
+            if animalCellModel?.animalInfo?.soundManager.hasPlayingSounds() == false{
+                animalCellModel?.animatedImageViewModel?.clear()
+            }
+        }
+//
         self.animatedImageView?.image = nil
         self.animatedImageView?.DeInitialization()
-        
-        //self.animatedImageView?.model?.animatedImageView = nil
-        self.animatedImageView?.model = nil
-        
+//
+//        self.animatedImageView?.model?.animatedImageView = nil
+//        self.animatedImageView?.model = nil
+//
         self.animatedImageView?.removeFromSuperview()
-        
+
         self.nameLabel.isHidden = false
-        
+
         self.contentView.removeGestureRecognizer(tapGestureRecognizer)
         self.contentView.removeGestureRecognizer(longGestureRecognizer)
         self.layer.removeAllAnimations()
@@ -91,8 +98,9 @@ class AnimalCell: UICollectionViewCell{
             ] as [NSAttributedString.Key : Any]
     
     func start(with: AnimalCellModel){
-        self.animalCellModel = with
         
+        self.animalCellModel = with
+
         self.contentView.backgroundColor = .white
         self.contentView.layer.cornerRadius = 15
         self.contentView.layer.borderWidth = 0.5
@@ -131,16 +139,16 @@ class AnimalCell: UICollectionViewCell{
                 }
                 
                 
-                self.contentView.addSubview(animatedImageView!)
+                self.contentView.insertSubview(animatedImageView!, aboveSubview: previewImageView)
                 animatedImageView?.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
                 animatedImageView?.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor).isActive = true
                 animatedImageView?.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor).isActive = true
                 animatedImageView?.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor).isActive = true
             }
             
-            if animatedImageView?.model == nil{
-                animatedImageView?.model = model
-            }
+            
+            animatedImageView?.model = model
+            
             
             
         }
@@ -317,7 +325,7 @@ class AnimalCell: UICollectionViewCell{
     
     ///Did start playing
     func didStartPlaying(){
-        print(animatedImageView?.model, animatedImageView?.model?.animatedImageView)
+        
         animatedImageView?.loadVideo()
     }
     

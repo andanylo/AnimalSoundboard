@@ -97,25 +97,6 @@ class ViewController: UIViewController {
         
         SoundHandler.shared.viewController = self
         
-        self.dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: {  collectionView, indexPath, model in
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewIdentifiers.cell.rawValue, for: indexPath) as? AnimalCell else{
-                return UICollectionViewCell()
-            }
-            
-            cell.start(with: model)
-            
-            return cell
-        })
-        
-        self.dataSource?.supplementaryViewProvider = { collectionView, type, indexPath in
-            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CollectionViewIdentifiers.header.rawValue, for: indexPath) as? Header else{
-                return Header(frame: CGRect.zero)
-            }
-            let sections: [Section] = [.favorites, .main, .wild, .farm, .birds, .cats, .dogs]
-            
-            header.start(section: sections[indexPath.section])
-            return header
-        }
         
         self.view.addSubview(collectionView)
         collectionView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
@@ -177,6 +158,28 @@ class ViewController: UIViewController {
             }
         }
         
+        
+        self.dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: {  collectionView, indexPath, model in
+           
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewIdentifiers.cell.rawValue, for: indexPath) as? AnimalCell else{
+                
+                return UICollectionViewCell()
+            }
+            
+            cell.start(with: model)
+            
+            return cell
+        })
+        
+        self.dataSource?.supplementaryViewProvider = { collectionView, type, indexPath in
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CollectionViewIdentifiers.header.rawValue, for: indexPath) as? Header else{
+                return Header(frame: CGRect.zero)
+            }
+            let sections: [Section] = [.favorites, .main, .wild, .farm, .insects, .birds, .cats, .dogs]
+            
+            header.start(section: sections[indexPath.section])
+            return header
+        }
     }
     
     enum Section: String{
@@ -184,6 +187,7 @@ class ViewController: UIViewController {
         case main = "main"
         case wild = "wild"
         case farm = "farm"
+        case insects = "insects"
         case birds = "birds"
         case cats = "cats"
         case dogs = "dogs"
@@ -214,30 +218,30 @@ class ViewController: UIViewController {
         
         ///Show the search bar if scrolled past the top
         ///
-//        guard scrollView.isDragging else{
-//            lastScroll = contentOffset
-//            return
-//        }
-        if scrollView.isDragging{
-            self.animateStopButtonBottomConstraint(hide: true)
-            
+        guard scrollView.isDragging else{
+            lastScroll = contentOffset
+            return
         }
-        
+        if scrollView.isDragging{
+           // self.animateStopButtonBottomConstraint(hide: true)
+
+        }
+
         let delta = contentOffset - lastScroll
         let constant = topConstraint.constant - delta
         let searchTopConstraint = max(constant < 0 ? constant : 0, -searchView.frame.height)
-        
-       
+
+
         ///CONST >= (-HEIGHT) - hide
         ///CONST <= 0 - show
         //show search bar
-       
-        
-        
+
+
+
         if topConstraint.constant != searchTopConstraint && scrollView.contentOffset.y + scrollView.frame.height < scrollView.contentSize.height && searchView.searchBar.text?.isEmpty != false{
             if delta < 0{
                 topConstraint.constant = searchTopConstraint
-                
+
                 //collectionView.contentInset.top = searchView.frame.height - self.view.safeAreaInsets.top + topConstraint.constant
             }
             else{
@@ -250,7 +254,7 @@ class ViewController: UIViewController {
 
             self.view.layoutIfNeeded()
         }
-        
+
         lastScroll = contentOffset
     }
 

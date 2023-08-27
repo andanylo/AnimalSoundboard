@@ -42,11 +42,11 @@ class CollectionViewModel{
     
     func createSnapshot(cellModels: [AnimalCellModel]) -> NSDiffableDataSourceSnapshot<ViewController.Section, AnimalCellModel>{
         var snapshot = NSDiffableDataSourceSnapshot<ViewController.Section, AnimalCellModel>()
-        snapshot.appendSections([.favorites, .main, .wild, .farm, .birds, .cats, .dogs])
+        snapshot.appendSections([.favorites, .main, .wild, .farm, .insects, .birds, .cats, .dogs])
         let favoriteModels = cellModels.filter({$0.animalInfo?.favorite == true})
         snapshot.appendItems(favoriteModels, toSection: .favorites)
         
-        let sections: [ViewController.Section] = [.main, .wild, .farm, .birds, .cats, .dogs]
+        let sections: [ViewController.Section] = [.main, .wild, .farm, .insects, .birds, .cats, .dogs]
         for section in sections{
             let sectionModels = cellModels.filter({($0.animalInfo?.info?.group_id == section.rawValue || (section == .main && $0.animalInfo?.info == nil)) && $0.animalInfo?.favorite == false})
             snapshot.appendItems(sectionModels, toSection: section)
